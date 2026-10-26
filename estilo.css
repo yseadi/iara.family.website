@@ -871,7 +871,5 @@ html[lang="pt-BR"] .sigla-en, html:not([lang="pt-BR"]) .sigla-pt { display: none
 .pagina-legal .pagina-abertura h1 { font-size: clamp(32px, 4.4vw, 54px); max-width: 20em; }
 /* Ícone da mãe na abertura de cada página */
 .icone-abertura { display: block; margin-bottom: 30px; background: linear-gradient(170deg, #f6e3ae, #d4af62 55%, #b8902f); -webkit-mask: var(--m) center / contain no-repeat; mask: var(--m) center / contain no-repeat; filter: drop-shadow(0 0 14px rgba(212, 175, 98, 0.45)); }
-.icone-abertura.ic-bau { --m: url(imagens/bau.png); width: 96px; aspect-ratio: 576 / 408; }
-.icone-abertura.ic-concha { --m: url(imagens/concha.png); width: 84px; aspect-ratio: 262 / 225; }
-.icone-abertura.ic-coracao { --m: url(imagens/historia/coracao-mae-2.png); width: 56px; aspect-ratio: 355 / 437; }
 svg.icone-abertura { width: 64px; height: 64px; background: none; -webkit-mask: none; mask: none; }
+svg.icone-abertura.ic-desenho { width: 96px; height: 96px; margin-left: -6px; }
