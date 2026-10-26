@@ -602,7 +602,8 @@ h3 { font-size: 23px; line-height: 1.15; font-variation-settings: "SOFT" 100, "o
 .tela-carga::before { content: ""; position: absolute; width: 60vmax; height: 60vmax; left: -18vmax; top: -22vmax; border-radius: 50%; background: radial-gradient(circle, rgba(48, 190, 170, 0.28), transparent 65%); filter: blur(70px); }
 .carregando .tela-carga, .saindo .tela-carga { opacity: 1; visibility: visible; pointer-events: auto; transition: opacity 0.4s ease; }
 .carregando.carregou .tela-carga { opacity: 0; visibility: hidden; transition: opacity 0.6s ease, visibility 0s 0.6s; }
-.carga-tridente { position: relative; width: 84px; height: 84px; filter: drop-shadow(0 0 18px rgba(242, 212, 141, 0.55)); }
+.carga-tridente { position: relative; width: 84px; height: 84px; overflow: visible; }
+.tela-carga::after { content: ""; position: absolute; left: 50%; top: 50%; width: 260px; height: 260px; margin: -130px 0 0 -130px; border-radius: 50%; background: radial-gradient(circle, rgba(242, 212, 141, 0.16), rgba(242, 212, 141, 0.05) 40%, transparent 70%); pointer-events: none; }
 .carga-tridente path { stroke-dasharray: 1; stroke-dashoffset: 1; }
 .carregando .carga-tridente path, .saindo .carga-tridente path { animation: desenha 0.9s cubic-bezier(.6,.1,.2,1) forwards; }
 .carregando .carga-tridente .onda, .saindo .carga-tridente .onda { animation: onda-carga 1.6s cubic-bezier(.6,.1,.2,1) infinite; }
@@ -632,7 +633,7 @@ h3 { font-size: 23px; line-height: 1.15; font-variation-settings: "SOFT" 100, "o
 html[lang="pt-BR"] .sigla-en, html:not([lang="pt-BR"]) .sigla-pt { display: none; }
 .sigla-palavra { display: inline-grid; }
 .sigla-palavra > span { grid-area: 1 / 1; white-space: nowrap; }
-.sigla-palavra .para { font-style: italic; color: var(--petroleo); }
+.sigla-palavra .para { color: var(--petroleo); }
 .sigla-palavra i { display: inline-block; font-style: inherit; will-change: transform, opacity, filter; }
 .sigla .inicial { color: #b8902f; }
 .sigla-legenda { position: relative; display: grid; margin: 40px 0 0; font-size: 12px; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase; color: var(--tinta-3); }
@@ -842,11 +843,11 @@ html[lang="pt-BR"] .sigla-en, html:not([lang="pt-BR"]) .sigla-pt { display: none
 @media (prefers-reduced-motion: reduce) { .garrafa-viva .camada { animation: none; } }
 .nome-escrito .tracado { width: min(100%, 220px); }
 /* Antes do lançamento: o botão do app vira um aviso, sem clique nem efeito */
-.em-breve { cursor: default; pointer-events: none; opacity: 0.85; }
+.em-breve { cursor: default; pointer-events: none; }
 .topo.vidro .topo-botao.em-breve, .topo.sempre .topo-botao.em-breve { pointer-events: none; }
 
 /* Termos, privacidade e governança: um documento calmo, numa coluna só */
-.documento { padding: 100px var(--lado) 140px; }
+.secao-legal { padding: 100px var(--lado) 140px; }
 .doc { max-width: 760px; margin: 0 auto; color: var(--tinta-2); font-size: 17px; line-height: 1.7; }
 .doc-versao { margin: 0 0 50px; font-size: 12px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: #a8822a; }
 .doc p { margin: 0 0 18px; }
@@ -862,9 +863,15 @@ html[lang="pt-BR"] .sigla-en, html:not([lang="pt-BR"]) .sigla-pt { display: none
 .doc-linha > :first-child { color: var(--tinta); font-weight: 500; }
 .doc-cabeca > * { font-size: 11.5px; font-weight: 600 !important; letter-spacing: 0.16em; text-transform: uppercase; color: var(--tinta-3) !important; }
 @media (max-width: 640px) {
-  .documento { padding-top: 70px; }
+  .secao-legal { padding-top: 70px; }
   .doc { font-size: 16px; }
   .doc-linha { grid-template-columns: 1fr; gap: 4px; }
   .doc-cabeca { display: none; }
 }
 .pagina-legal .pagina-abertura h1 { font-size: clamp(32px, 4.4vw, 54px); max-width: 20em; }
+/* Ícone da mãe na abertura de cada página */
+.icone-abertura { display: block; margin-bottom: 30px; background: linear-gradient(170deg, #f6e3ae, #d4af62 55%, #b8902f); -webkit-mask: var(--m) center / contain no-repeat; mask: var(--m) center / contain no-repeat; filter: drop-shadow(0 0 14px rgba(212, 175, 98, 0.45)); }
+.icone-abertura.ic-bau { --m: url(imagens/bau.png); width: 96px; aspect-ratio: 576 / 408; }
+.icone-abertura.ic-concha { --m: url(imagens/concha.png); width: 84px; aspect-ratio: 262 / 225; }
+.icone-abertura.ic-coracao { --m: url(imagens/historia/coracao-mae-2.png); width: 56px; aspect-ratio: 355 / 437; }
+svg.icone-abertura { width: 64px; height: 64px; background: none; -webkit-mask: none; mask: none; }
