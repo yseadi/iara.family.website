@@ -648,14 +648,6 @@ window.TEXTOS_PT = {
   "gd45": "<b>Recuperar:</b> restaurar o que se perdeu a partir das cópias de segurança.",
   "gd46": "<b>Aprender:</b> registrar o incidente, o que foi feito e o que muda para não se repetir. O registro fica guardado por 5 anos.",
   "gd47": "Quem perceber algo estranho pode avisar pelo suporte ou por <a href=\"mailto:contact@iara.family\">contact@iara.family</a>, a qualquer hora.",
-  "gd48": "5. Revisão e versões",
-  "gd49": "Esta política é revista uma vez por ano, e também sempre que entrar um fornecedor novo, mudar a lei ou acontecer um incidente.",
-  "gd50": "Versão",
-  "gd51": "Data",
-  "gd52": "O que mudou",
-  "gd53": "GD-001/2026",
-  "gd54": "Antes do lançamento",
-  "gd55": "Primeira versão",
-  "gd56": "<i>Este texto foi escrito em português. Se a tradução for diferente, vale a versão em português.</i>",
+  "gd48": "<i>Este texto foi escrito em português. Se a tradução for diferente, vale a versão em português.</i>",
   "titulo-governanca": "Iara · Governança de dados"
 };
