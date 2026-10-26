@@ -1,0 +1,5 @@
+Contact: mailto:contact@iara.family
+Expires: 2027-10-26T00:00:00.000Z
+Preferred-Languages: pt, en
+Canonical: https://iara.family/.well-known/security.txt
+Policy: https://iara.family/seguranca.html

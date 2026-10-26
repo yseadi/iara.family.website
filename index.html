@@ -1,0 +1,457 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Iara · Your family’s chest</title>
+  <meta name="description" content="Photos, letters and the voices of those who came before, kept with your family in one place.">
+  <meta name="theme-color" content="#0b2a30">
+  <meta property="og:title" content="Iara · Your family’s chest">
+  <meta property="og:description" content="Photos, letters and the voices of those who came before, kept with your family in one place.">
+  <meta property="og:image" content="https://iara.family/imagens/previa.png">
+  <meta property="og:url" content="https://iara.family">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="imagens/icone.svg" type="image/svg+xml">
+  <link rel="preload" href="fontes/fraunces.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fontes/rethink-sans.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="estilo.css">
+  <!-- Vindo de outra página do site: a tela de carregamento já aparece antes do primeiro quadro -->
+  <script>try { if (sessionStorage.getItem("iara-troca")) { sessionStorage.removeItem("iara-troca"); document.documentElement.classList.add("carregando"); } } catch (e) {}</script>
+</head>
+<body>
+  <div class="tela-carga" aria-hidden="true">
+    <svg class="carga-tridente" viewBox="0 0 24 24">
+      <defs><linearGradient id="ouro-carga" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f6e3ae"/><stop offset="1" stop-color="#d4af62"/></linearGradient></defs>
+      <g fill="none" stroke="url(#ouro-carga)" stroke-width="0.9" stroke-linecap="round" stroke-linejoin="round">
+        <path pathLength="1" d="M12 2.6V21.4M6 4V8.6H18V4M4.4 6L6 3.8L7.6 6M10.4 4.8L12 2.6L13.6 4.8M16.4 6L18 3.8L19.6 6"/>
+        <path class="onda" pathLength="1" d="M5 13.2c2 2 4 2 7 0 3 2 5 2 7 0"/>
+        <path class="onda" pathLength="1" d="M6 17.8c2 2 4 2 6 0 2 2 4 2 6 0"/>
+      </g>
+    </svg>
+  </div>
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <linearGradient id="ouro" gradientUnits="userSpaceOnUse" x1="4" y1="2" x2="20" y2="22">
+        <stop offset="0" stop-color="#F6E3AE"/><stop offset=".5" stop-color="#D4AF62"/><stop offset="1" stop-color="#EBCF8E"/>
+      </linearGradient>
+      <symbol id="palavra" viewBox="0 0 926 334"><path d="M118.547 315.773H0V307.969C5.90625 307.969 10.6875 307.406 14.3438 306.281C18.1406 305.016 21.0938 303.398 23.2031 301.43C25.3125 299.32 26.7188 297 27.4219 294.469C28.2656 291.797 28.6875 288.984 28.6875 286.031V119.18C28.6875 117.07 28.3359 114.75 27.6328 112.219C26.9297 109.547 25.5234 107.156 23.4141 105.047C21.4453 102.797 18.5625 100.969 14.7656 99.5625C11.1094 98.0156 6.1875 97.2422 0 97.2422V89.0156H118.547V97.2422C112.922 97.2422 108.211 97.8047 104.414 98.9297C100.758 100.055 97.8047 101.531 95.5547 103.359C93.4453 105.188 91.9688 107.367 91.125 109.898C90.2812 112.289 89.8594 114.82 89.8594 117.492V286.031C89.8594 288.141 90.2109 290.461 90.9141 292.992C91.6172 295.523 92.9531 297.914 94.9219 300.164C97.0312 302.273 99.9141 304.102 103.57 305.648C107.367 307.195 112.359 307.969 118.547 307.969V315.773ZM26.7891 32.9062C26.7891 28.4062 27.6328 24.1875 29.3203 20.25C31.1484 16.1719 33.5391 12.6562 36.4922 9.70312C39.4453 6.75 42.8906 4.42969 46.8281 2.74219C50.9062 0.914062 55.1953 0 59.6953 0C64.1953 0 68.4141 0.914062 72.3516 2.74219C76.4297 4.42969 79.9453 6.75 82.8984 9.70312C85.8516 12.6562 88.1719 16.1719 89.8594 20.25C91.6875 24.1875 92.6016 28.4062 92.6016 32.9062C92.6016 37.4062 91.6875 41.6953 89.8594 45.7734C88.1719 49.7109 85.8516 53.1562 82.8984 56.1094C79.9453 59.0625 76.4297 61.3828 72.3516 63.0703C68.4141 64.7578 64.1953 65.6016 59.6953 65.6016C55.1953 65.6016 50.9062 64.7578 46.8281 63.0703C42.8906 61.3828 39.4453 59.0625 36.4922 56.1094C33.5391 53.1562 31.1484 49.7109 29.3203 45.7734C27.6328 41.6953 26.7891 37.4062 26.7891 32.9062Z" fill="currentColor"/><path d="M237.805 79.9453C248.352 79.9453 257.984 81.0703 266.703 83.3203C275.562 85.5703 283.367 88.3125 290.117 91.5469C297.008 94.7812 302.914 98.2266 307.836 101.883C312.898 105.539 316.906 108.844 319.859 111.797C324.219 108.422 328.93 105.398 333.992 102.727C339.055 99.9141 344.188 97.5234 349.391 95.5547C354.594 93.5859 359.727 92.1094 364.789 91.125C369.992 90 374.914 89.2969 379.555 89.0156L382.086 95.9766C376.461 98.2266 371.398 101.883 366.898 106.945C363.102 111.305 359.586 117.281 356.352 124.875C353.117 132.469 351.359 142.383 351.078 154.617C350.938 161.789 350.867 169.242 350.867 176.977C350.867 184.711 350.797 192.375 350.656 199.969C350.656 207.422 350.586 214.594 350.445 221.484C350.445 228.234 350.375 234.281 350.234 239.625C350.234 244.969 350.234 249.328 350.234 252.703C350.234 255.938 350.234 257.836 350.234 258.398C350.234 270.633 351.781 280.547 354.875 288.141C358.109 295.734 361.695 301.711 365.633 306.07C370.273 311.133 375.477 314.789 381.242 317.039L378.711 324C371.82 323.719 364.438 322.523 356.562 320.414C348.688 318.305 341.023 315.352 333.57 311.555C326.117 307.758 319.227 303.258 312.898 298.055C306.57 292.711 301.438 286.664 297.5 279.914C294.688 285.258 291.102 290.461 286.742 295.523C282.383 300.586 277.039 305.086 270.711 309.023C264.383 312.961 256.93 316.125 248.352 318.516C239.773 321.047 229.93 322.312 218.82 322.312C200.539 322.312 184.438 319.078 170.516 312.609C156.734 306 145.203 297.422 135.922 286.875C126.641 276.188 119.609 264.164 114.828 250.805C110.188 237.445 107.867 223.945 107.867 210.305C107.867 200.039 109.062 189.703 111.453 179.297C113.984 168.891 117.641 158.906 122.422 149.344C127.344 139.641 133.391 130.57 140.562 122.133C147.875 113.695 156.312 106.383 165.875 100.195C175.578 93.8672 186.406 88.9453 198.359 85.4297C210.312 81.7734 223.461 79.9453 237.805 79.9453ZM238.648 300.164C248.492 300.164 256.648 297.914 263.117 293.414C269.586 288.914 274.719 283.43 278.516 276.961C282.453 270.492 285.336 263.672 287.164 256.5C288.992 249.328 290.258 243 290.961 237.516L292.648 157.57C292.367 154.617 291.805 151.031 290.961 146.812C290.258 142.594 289.133 138.234 287.586 133.734C286.039 129.234 284 124.734 281.469 120.234C279.078 115.594 275.984 111.516 272.188 108C268.391 104.484 263.82 101.602 258.477 99.3516C253.273 97.1016 247.156 95.9766 240.125 95.9766C229.578 95.9766 220.016 98.6484 211.438 103.992C202.859 109.336 195.547 116.648 189.5 125.93C183.453 135.07 178.742 145.758 175.367 157.992C172.133 170.227 170.516 183.234 170.516 197.016C170.516 215.016 172.414 230.484 176.211 243.422C180.148 256.359 185.281 267.047 191.609 275.484C198.078 283.922 205.391 290.18 213.547 294.258C221.703 298.195 230.07 300.164 238.648 300.164Z" fill="currentColor"/><path d="M662.519 322.926C652.098 326.742 642.484 329.384 633.678 330.852C625.018 332.466 617.092 333.273 609.9 333.273C601.241 333.273 592.728 331.365 584.362 327.549C576.143 323.733 568.29 318.816 560.805 312.799C553.319 306.781 546.274 300.029 539.669 292.544C533.211 285.058 527.341 277.646 522.057 270.308C516.92 262.969 512.443 256.071 508.627 249.613C504.958 243.155 502.169 237.944 500.261 233.981C514.498 231.633 527.267 227.45 538.569 221.432C543.412 218.79 548.109 215.708 552.659 212.186C557.209 208.516 561.245 204.187 564.768 199.196C568.437 194.206 571.373 188.555 573.574 182.244C575.776 175.933 576.876 168.741 576.876 160.668C576.876 149.514 574.822 140.34 570.712 133.148C566.602 125.81 561.465 120.012 555.301 115.756C549.283 111.499 542.678 108.564 535.486 106.949C528.441 105.188 521.983 104.307 516.112 104.307C510.242 104.307 505.325 104.895 501.362 106.069C497.546 107.243 494.463 108.784 492.115 110.692C489.913 112.6 488.372 114.875 487.492 117.517C486.611 120.012 486.171 122.654 486.171 125.443V293.645C486.171 295.846 486.538 298.268 487.271 300.91C488.005 303.552 489.4 306.047 491.455 308.395C493.656 310.597 496.665 312.505 500.481 314.12C504.444 315.734 509.654 316.541 516.112 316.541V324.687H391.942V316.541C398.107 316.541 403.097 315.954 406.913 314.78C410.876 313.459 413.958 311.771 416.16 309.716C418.362 307.515 419.829 305.093 420.563 302.451C421.444 299.662 421.884 296.727 421.884 293.645V118.177C421.884 115.976 421.444 113.628 420.563 111.132C419.829 108.49 418.362 106.142 416.16 104.087C413.958 101.886 410.876 100.124 406.913 98.8034C403.097 97.3357 398.107 96.6019 391.942 96.6019V88.0156H516.112C531.964 88.0156 547.522 89.41 562.786 92.1987C578.051 94.8406 591.627 99.097 603.516 104.968C615.551 110.839 625.238 118.398 632.577 127.644C639.915 136.744 643.585 147.752 643.585 160.668C643.585 170.942 641.31 179.969 636.76 187.748C632.21 195.527 626.192 202.352 618.707 208.223C611.221 213.947 602.635 218.79 592.948 222.753C583.408 226.569 573.574 229.725 563.447 232.22C569.024 242.494 575.482 252.695 582.821 262.822C590.159 272.803 597.571 281.756 605.057 289.682C612.542 297.608 619.734 303.992 626.633 308.836C633.678 313.679 639.622 316.101 644.465 316.101C645.933 316.101 647.988 315.954 650.63 315.661C653.419 315.22 656.501 314.34 659.877 313.019L662.519 322.926Z" fill="currentColor"/><path d="M781.148 82.9453C791.695 82.9453 801.328 84.0703 810.047 86.3203C818.906 88.5703 826.711 91.3125 833.461 94.5469C840.352 97.7812 846.258 101.227 851.18 104.883C856.242 108.539 860.25 111.844 863.203 114.797C867.562 111.422 872.273 108.398 877.336 105.727C882.398 102.914 887.531 100.523 892.734 98.5547C897.938 96.5859 903.07 95.1094 908.133 94.125C913.336 93 918.258 92.2969 922.898 92.0156L925.43 98.9766C919.805 101.227 914.742 104.883 910.242 109.945C906.445 114.305 902.93 120.281 899.695 127.875C896.461 135.469 894.703 145.383 894.422 157.617C894.281 164.789 894.211 172.242 894.211 179.977C894.211 187.711 894.141 195.375 894 202.969C894 210.422 893.93 217.594 893.789 224.484C893.789 231.234 893.719 237.281 893.578 242.625C893.578 247.969 893.578 252.328 893.578 255.703C893.578 258.938 893.578 260.836 893.578 261.398C893.578 273.633 895.125 283.547 898.219 291.141C901.453 298.734 905.039 304.711 908.977 309.07C913.617 314.133 918.82 317.789 924.586 320.039L922.055 327C915.164 326.719 907.781 325.523 899.906 323.414C892.031 321.305 884.367 318.352 876.914 314.555C869.461 310.758 862.57 306.258 856.242 301.055C849.914 295.711 844.781 289.664 840.844 282.914C838.031 288.258 834.445 293.461 830.086 298.523C825.727 303.586 820.383 308.086 814.055 312.023C807.727 315.961 800.273 319.125 791.695 321.516C783.117 324.047 773.273 325.312 762.164 325.312C743.883 325.312 727.781 322.078 713.859 315.609C700.078 309 688.547 300.422 679.266 289.875C669.984 279.188 662.953 267.164 658.172 253.805C653.531 240.445 651.211 226.945 651.211 213.305C651.211 203.039 652.406 192.703 654.797 182.297C657.328 171.891 660.984 161.906 665.766 152.344C670.688 142.641 676.734 133.57 683.906 125.133C691.219 116.695 699.656 109.383 709.219 103.195C718.922 96.8672 729.75 91.9453 741.703 88.4297C753.656 84.7734 766.805 82.9453 781.148 82.9453ZM781.992 303.164C791.836 303.164 799.992 300.914 806.461 296.414C812.93 291.914 818.062 286.43 821.859 279.961C825.797 273.492 828.68 266.672 830.508 259.5C832.336 252.328 833.602 246 834.305 240.516L835.992 160.57C835.711 157.617 835.148 154.031 834.305 149.812C833.602 145.594 832.477 141.234 830.93 136.734C829.383 132.234 827.344 127.734 824.812 123.234C822.422 118.594 819.328 114.516 815.531 111C811.734 107.484 807.164 104.602 801.82 102.352C796.617 100.102 790.5 98.9766 783.469 98.9766C772.922 98.9766 763.359 101.648 754.781 106.992C746.203 112.336 738.891 119.648 732.844 128.93C726.797 138.07 722.086 148.758 718.711 160.992C715.477 173.227 713.859 186.234 713.859 200.016C713.859 218.016 715.758 233.484 719.555 246.422C723.492 259.359 728.625 270.047 734.953 278.484C741.422 286.922 748.734 293.18 756.891 297.258C765.047 301.195 773.414 303.164 781.992 303.164Z" fill="currentColor"/></symbol>
+    </defs>
+  </svg>
+
+  <!-- Topo fixo: fica de vidro quando a página desce -->
+  <header class="topo" data-topo>
+    <a href="#inicio" class="topo-marca" aria-label="Iara, home" data-t-aria-label="a8">
+      <svg class="topo-tridente" viewBox="0 0 24 24" aria-hidden="true"><g fill="none" stroke="url(#ouro)" stroke-width="1.4"><path d="M12 2.6V21.4M6 4V8.6H18V4M4.4 6L6 3.8L7.6 6M10.4 4.8L12 2.6L13.6 4.8M16.4 6L18 3.8L19.6 6"/><path d="M5 13.2c2 2 4 2 7 0 3 2 5 2 7 0"/><path d="M6 17.8c2 2 4 2 6 0 2 2 4 2 6 0"/></g></svg>
+      <svg class="topo-palavra" aria-hidden="true"><use href="#palavra"/></svg>
+    </a>
+    <nav class="topo-nav" id="menu" data-menu aria-label="Main" data-t-aria-label="n0">
+      <a href="./" class="so-celular" data-t="n6" aria-current="page">Home</a>
+      <a href="./#como" data-t="n1">How it works</a>
+      <a href="seguranca.html" data-t="n2">Security</a>
+      <a href="soberania.html" data-t="n3">Sovereignty</a>
+      <a href="historia.html" data-t="n4">Our story</a>
+    </nav>
+    <div class="topo-acoes">
+      <button type="button" class="idioma" data-idioma aria-label="Ver em português" lang="pt">PT</button>
+      <span class="topo-botao em-breve"><span data-t="c1">Coming soon</span></span>
+      <button type="button" class="menu-botao" data-menu-botao aria-expanded="false" aria-controls="menu" data-t="n5">Menu</button>
+    </div>
+  </header>
+
+  <main>
+    <!-- 1. Abertura -->
+    <section class="abertura escuro" id="inicio" data-tema="escuro">
+      <div class="abertura-fundo" aria-hidden="true">
+        <div class="mancha m1" data-paralaxe="0.25"></div>
+        <div class="mancha m2" data-paralaxe="0.12"></div>
+        <div class="mancha m3" data-paralaxe="0.35"></div>
+        <div class="raios" data-paralaxe="0.45"><i></i><i></i><i></i><i></i><i></i></div>
+        <canvas class="plancton" data-plancton></canvas>
+      </div>
+      <div class="abertura-conteudo" data-mergulho>
+        <svg class="tridente" viewBox="0 0 24 24" aria-hidden="true">
+          <g fill="none" stroke="url(#ouro)" stroke-width="0.9">
+            <path pathLength="1" d="M12 2.6V21.4M6 4V8.6H18V4M4.4 6L6 3.8L7.6 6M10.4 4.8L12 2.6L13.6 4.8M16.4 6L18 3.8L19.6 6"/>
+            <path pathLength="1" d="M5 13.2c2 2 4 2 7 0 3 2 5 2 7 0"/>
+            <path pathLength="1" d="M6 17.8c2 2 4 2 6 0 2 2 4 2 6 0"/>
+          </g>
+        </svg>
+        <svg class="abertura-palavra" role="img" aria-label="Iara"><use href="#palavra"/></svg>
+        <p class="rotulo claro" data-t="t1">Digital legacy</p>
+        <h1 class="titulo-abertura" data-palavras data-t="t2">Photos, letters and grandma’s voice. All kept with care.</h1>
+        <p class="sub claro" data-t="t3">A private place for your family’s photos, letters and voices.</p>
+        <div class="acoes">
+          <span class="botao brilho em-breve" data-t="c1">Coming soon</span>
+          <a href="#como" class="botao leve" data-t="t4">See how it works</a>
+        </div>
+        <a href="#bau" class="descer" aria-label="Scroll down" data-t-aria-label="a9"><span></span></a>
+      </div>
+    </section>
+
+    <!-- Os três pilares: segurança, soberania e a história -->
+    <section class="pilares claro" data-tema="claro">
+      <p class="pilares-frase revelar" data-t="p0">Memory is not disposable data. It is a right, and it deserves to be kept with the seriousness of an archive.</p>
+      <ul class="pilares-lista">
+        <li class="revelar">
+          <span class="pilar-numero">I</span>
+          <h3 data-t="p1">Security comes first</h3>
+          <p data-t="p2">Iara never asks for identity documents. Each family is closed, and only the people it invites can see what it keeps.</p>
+          <a href="seguranca.html" class="seta" data-t="p3">How we protect it</a>
+        </li>
+        <li class="revelar">
+          <span class="pilar-numero">II</span>
+          <h3 data-t="p4">Outside the big tech clouds</h3>
+          <p data-t="p5">Servers in Paris, European companies, no advertising and nothing for sale. The family can leave with everything at any time.</p>
+          <a href="soberania.html" class="seta" data-t="p6">About digital sovereignty</a>
+        </li>
+        <li class="revelar">
+          <span class="pilar-numero">III</span>
+          <h3 data-t="p7">Born from a family story</h3>
+          <p data-t="p8">Milad, the great-grandfather of the founder, left Lebanon for Brasil, and much of his story was scattered on the way. Iara exists so that this does not happen again.</p>
+          <a href="historia.html" class="seta" data-t="p9">Read the story</a>
+        </li>
+      </ul>
+    </section>
+
+    <!-- 2. O que cabe no baú: as memórias flutuam e entram no baú conforme a página desce -->
+    <section class="bau-cena claro" id="bau" data-tema="claro">
+      <div class="veu" aria-hidden="true"></div>
+      <div class="bau-trilho">
+        <div class="bau-palco" data-cena-bau>
+          <div class="bau-titulo revelar">
+            <p class="rotulo" data-t="t6">What the chest holds</p>
+            <h2 data-t="t7">Everything your family keeps at home</h2>
+            <p class="sub" data-t="t8">Each person brings what they kept. It all stays in one place, with the date, the names and who shared it.</p>
+          </div>
+          <div class="bau-centro">
+            <div class="bau-luz" aria-hidden="true"></div>
+            <div class="bau-desenho" role="img" aria-label="Hand-drawn chest" data-t-aria-label="a0"></div>
+                        <div class="memoria-voa foto" data-voa="-1.1,-0.9,-8">
+              <img class="foto-cor" src="imagens/historia/ceia.webp" alt="" loading="lazy" decoding="async">
+              <span class="legenda" data-t="t9"><b>Christmas dinner</b>At grandma’s</span>
+            </div>
+            <div class="memoria-voa documento" data-voa="1.15,-0.75,7">
+              <span class="linhas"><i></i><i></i><i></i><i></i><i></i></span>
+              <span class="legenda" data-t="t10"><b>Marriage certificate</b>1920 · Porto Alegre</span>
+            </div>
+            <div class="memoria-voa voz" data-voa="-1.2,0.55,5">
+              <span class="ondas-som"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span>
+              <span class="legenda" data-t="t11"><b>Grandma’s voice</b>Christmas 2025 · 4 min</span>
+            </div>
+            <div class="memoria-voa conversa" data-voa="1.1,0.6,-6">
+              <span class="balao" data-t="t12">Grandma only brought out this tablecloth at Christmas.</span>
+              <span class="autor" data-t="t92">Estela, on the Christmas photo</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <ul class="cabe-lista">
+        <li class="cartao revelar">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 8.5A2.5 2.5 0 0 1 6.5 6h1.8l1.4-2h4.6l1.4 2h1.8A2.5 2.5 0 0 1 20 8.5v8A2.5 2.5 0 0 1 17.5 19h-11A2.5 2.5 0 0 1 4 16.5z"/><circle cx="12" cy="12.4" r="3.4"/></svg>
+          <h3 data-t="t13">Photos</h3>
+          <p data-t="t14">From the album and from the phone. When a photo has a date, it comes back on that day.</p>
+        </li>
+        <li class="cartao revelar">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3h7l4 4v12.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 6 19.5v-15A1.5 1.5 0 0 1 7.5 3z"/><path d="M14 3v4h4M9 12h6M9 15.5h6"/></svg>
+          <h3 data-t="t15">Documents</h3>
+          <p data-t="t16">Old letters, certificates and papers, only the ones the family chooses to keep. Nothing is required.</p>
+        </li>
+        <li class="cartao revelar">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5.5 11a6.5 6.5 0 0 0 13 0M12 17.5V21"/></svg>
+          <h3 data-t="t17">Voices</h3>
+          <p data-t="t18">Record the conversation at dinner. Grandma’s voice stays next to her photos.</p>
+        </li>
+        <li class="cartao revelar">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5.5h14a1.5 1.5 0 0 1 1.5 1.5v8.5A1.5 1.5 0 0 1 19 17H10l-4.5 3.5V17H5a1.5 1.5 0 0 1-1.5-1.5V7A1.5 1.5 0 0 1 5 5.5z"/></svg>
+          <h3 data-t="t19">Conversations</h3>
+          <p data-t="t20">Everyone shares what they remember, reacts and tags who is in the photo.</p>
+        </li>
+      </ul>
+    </section>
+
+    <!-- 3. Como funciona: o celular fica parado e a tela muda a cada passo -->
+    <section class="como claro" id="como" data-tema="claro">
+      <div class="como-cabeca revelar">
+        <p class="rotulo" data-t="t21">How it works</p>
+        <h2 data-t="c100">From the first photo to the whole family</h2>
+        <p class="sub" data-t="c101">The app from the inside, in the screens designed for it, with the example family.</p>
+      </div>
+      <div class="como-corpo">
+        <div class="celular-fixo">
+          <div class="celular" data-celular>
+            <div class="celular-tela">
+              <img src="imagens/telas/bau-en.webp" data-src-pt="imagens/telas/bau-pt.webp" alt="The Seadi family’s chest, with Milad’s photo from this day at the top" data-t-alt="c105" class="tela ativa" data-tela="1" width="600" height="1298">
+              <img src="imagens/telas/guardar-en.webp" data-src-pt="imagens/telas/guardar-pt.webp" alt="The add button open, with the options to add a person, a file, an audio or a photo" data-t-alt="c108" class="tela" data-tela="2" width="600" height="1298" loading="lazy">
+              <img src="imagens/telas/gravar-en.webp" data-src-pt="imagens/telas/gravar-pt.webp" alt="Recording screen with the sound wave and the timer" data-t-alt="c111" class="tela" data-tela="3" width="600" height="1298" loading="lazy">
+              <img src="imagens/telas/conversa-en.webp" data-src-pt="imagens/telas/conversa-pt.webp" alt="An open photo, Milad with the clarinet, with reactions and comments from the family" data-t-alt="c114" class="tela" data-tela="4" width="600" height="1298" loading="lazy">
+              <img src="imagens/telas/convidar-en.webp" data-src-pt="imagens/telas/convidar-pt.webp" alt="Invitation for Samuel, with the role chosen before creating the link" data-t-alt="c117" class="tela" data-tela="5" width="600" height="1298" loading="lazy">
+              <img src="imagens/telas/mural-en.webp" data-src-pt="imagens/telas/mural-pt.webp" alt="The gallery in mural view" data-t-alt="c120" class="tela" data-tela="6" width="600" height="1298" loading="lazy">
+              <img src="imagens/telas/exportar-en.webp" data-src-pt="imagens/telas/exportar-pt.webp" alt="The screen to export the whole chest" data-t-alt="c123" class="tela" data-tela="7" width="600" height="1298" loading="lazy">
+            </div>
+          </div>
+        </div>
+        <ol class="passos">
+          <li class="passo" data-passo="1">
+            <div class="passo-cartao">
+              <span class="passo-numero">01</span>
+              <h3 data-t="c103">Create your family</h3>
+              <p data-t="c104">Give the chest a name and keep the first memory. On the day an old photo was taken, it comes back to the top of the chest.</p>
+            </div>
+          </li>
+          <li class="passo" data-passo="2">
+            <div class="passo-cartao">
+              <span class="passo-numero">02</span>
+              <h3 data-t="c106">Keep what you have at home</h3>
+              <p data-t="c107">Photos from the album or the phone, letters, papers and recordings. One button, in the corner of every screen.</p>
+            </div>
+          </li>
+          <li class="passo" data-passo="3">
+            <div class="passo-cartao">
+              <span class="passo-numero">03</span>
+              <h3 data-t="c109">Record a voice</h3>
+              <p data-t="c110">Ask someone to tell a memory. The voice stays in the chest, next to the photos of whoever told it.</p>
+            </div>
+          </li>
+          <li class="passo" data-passo="4">
+            <div class="passo-cartao">
+              <span class="passo-numero">04</span>
+              <h3 data-t="c112">Talk about each memory</h3>
+              <p data-t="c113">Who is in the photo, where it was, what happened that day. Each person adds what they remember, and the conversation stays with the photo.</p>
+            </div>
+          </li>
+          <li class="passo" data-passo="5">
+            <div class="passo-cartao">
+              <span class="passo-numero">05</span>
+              <h3 data-t="c115">Invite with care</h3>
+              <p data-t="c116">Choose what each person can do before sending the link. The invitation lasts 7 days and works for one person only.</p>
+              <span class="papeis">
+                <span class="papel" style="--p:#b8902f" data-t="t33">Guardian</span>
+                <span class="papel" style="--p:#0e5a63">Admin</span>
+                <span class="papel" style="--p:#7b63de">Editor</span>
+                <span class="papel" style="--p:#e0705f" data-t="t34">Commenter</span>
+                <span class="papel" style="--p:#4466dc" data-t="t35">Viewer</span>
+              </span>
+            </div>
+          </li>
+          <li class="passo" data-passo="6">
+            <div class="passo-cartao">
+              <span class="passo-numero">06</span>
+              <h3 data-t="c118">Find anything</h3>
+              <p data-t="c119">Search by name, place or year, and filter by person or by type of memory.</p>
+            </div>
+          </li>
+          <li class="passo" data-passo="7">
+            <div class="passo-cartao">
+              <span class="passo-numero">07</span>
+              <h3 data-t="c121">Take it all with you</h3>
+              <p data-t="c122">Whoever looks after the chest downloads everything in one file: folders by year and the tree in a format that other genealogy services open.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- 4. A árvore: as linhas se desenham conforme a página desce -->
+    <section class="arvore claro" id="arvore" data-tema="claro" data-cena-arvore>
+      <div class="arvore-texto revelar">
+        <p class="rotulo" data-t="t36">The tree and its people</p>
+        <h2 data-t="t37">Those who came before have a place too</h2>
+        <p class="sub" data-t="t38">Grandparents, great-grandparents and those who have passed join the tree without an account. Here, four generations of the Seadi family, from Milad to Yasmim, who created Iara. The family fills in each profile little by little, with dates, places, nationalities and memories.</p>
+        <p class="sub" data-t="t39">To invite a relative who is already in the tree, send the invitation from their profile. When they accept, the profile and everything kept about them becomes theirs.</p>
+      </div>
+      <div class="arvore-desenho">
+        <svg viewBox="0 0 400 560" class="arvore-linhas" aria-hidden="true">
+          <path pathLength="1" d="M120 49 H 280"/>
+          <path pathLength="1" d="M200 49 V 126 H 120 V 203 M120 203 H 280"/>
+          <path pathLength="1" d="M200 203 V 280 H 120 V 357 M120 357 H 280"/>
+          <path pathLength="1" d="M200 357 V 511"/>
+        </svg>
+        <div class="uniao" style="--x:50%;--y:8.75%" data-t="t42">union</div>
+        <div class="no" style="--x:30%;--y:8.75%;--c:#e870a8" data-profundidade="0.5"><i>MA</i><b>Milad <span class="bandeira">🇱🇧</span></b><small data-t="t43">great-grandfather</small></div>
+        <div class="no" style="--x:70%;--y:8.75%;--c:#f2d48d;--t:#14191a" data-profundidade="0.3"><i>AB</i><b>Anna <span class="bandeira">🇮🇹</span></b><small data-t="t41">great-grandmother</small></div>
+        <div class="uniao" style="--x:50%;--y:36.25%" data-t="t42">union</div>
+        <div class="no" style="--x:30%;--y:36.25%;--c:#4466dc" data-profundidade="0.4"><i>NS</i><b>Natal <span class="bandeira">🇧🇷</span></b><small data-t="r2">grandfather</small></div>
+        <div class="no" style="--x:70%;--y:36.25%;--c:#8cc4e2;--t:#14191a" data-profundidade="0.25"><i>DS</i><b>Diva <span class="bandeira">🇧🇷</span></b><small data-t="r3">grandmother</small></div>
+        <div class="uniao" style="--x:50%;--y:63.75%" data-t="t42">union</div>
+        <div class="no" style="--x:30%;--y:63.75%;--c:#0e5a63" data-profundidade="0.35"><i>FS</i><b>Felipe <span class="bandeira">🇧🇷</span></b><small data-t="t44">father</small></div>
+        <div class="no" style="--x:70%;--y:63.75%;--c:#d9a6e3;--t:#14191a" data-profundidade="0.2"><i>IS</i><b>Iara <span class="bandeira">🇧🇷</span></b><small data-t="t45">mother</small></div>
+        <div class="no voce" style="--x:50%;--y:91.25%;--c:#c77ed6" data-profundidade="0.3"><i>YS</i><b>Yasmim <span class="bandeira">🇧🇷</span></b><small data-t="t46">created Iara</small></div>
+      </div>
+    </section>
+
+    <!-- 5. Segurança: a parte mais importante -->
+    <section class="cuidado claro" id="cuidado" data-tema="claro">
+      <div class="cuidado-cabeca">
+        <div class="chave" data-chave role="img" aria-label="Hand-drawn key" data-t-aria-label="a4"></div>
+        <div class="revelar">
+          <p class="rotulo" data-t="t48">Security</p>
+          <h2 data-t="t49">Security comes before everything</h2>
+          <p class="sub" data-t="s0">What belongs to the family stays with the family. And what does not exist yet, we say plainly.</p>
+        </div>
+      </div>
+      <ul class="cuidado-lista">
+        <li class="cartao revelar">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3h7l4 4v12.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 6 19.5v-15A1.5 1.5 0 0 1 7.5 3z"/><path d="M14 3v4h4M9.5 12.5l5 5M14.5 12.5l-5 5"/></svg>
+          <h3 data-t="s1">No documents requested</h3>
+          <p data-t="s1d">Iara never asks for identity papers, a phone number or an address. To take part you give a name and an email, and confirm you are 18 or over.</p>
+        </li>
+        <li class="cartao revelar">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2.5 12s3.5-6.5 9.5-6.5 9.5 6.5 9.5 6.5-3.5 6.5-9.5 6.5S2.5 12 2.5 12z"/><circle cx="12" cy="12" r="3"/></svg>
+          <h3 data-t="t50">Only your family sees it</h3>
+          <p data-t="t51">Each family is closed. The rules live inside the database itself, which refuses to show a memory to anyone outside the family.</p>
+        </li>
+        <li class="cartao revelar">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="10.5" width="14" height="10" rx="2"/><path d="M8 10.5V7.5a4 4 0 0 1 8 0v3"/></svg>
+          <h3 data-t="s2">A private vault for files</h3>
+          <p data-t="s2d">Photos, recordings and PDFs stay in a private vault. Each one opens only through a link that expires after 15 minutes.</p>
+        </li>
+        <li class="cartao revelar">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M3.5 12h17M12 3.5c2.6 2.6 3.6 5.5 3.6 8.5s-1 5.9-3.6 8.5c-2.6-2.6-3.6-5.5-3.6-8.5s1-5.9 3.6-8.5z"/></svg>
+          <h3 data-t="t52">Kept in Europe</h3>
+          <p data-t="t53">The servers are in Paris, under European data protection law. No big tech company holds the memories.</p>
+        </li>
+        <li class="cartao revelar">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 10v4h3l6 4V6L7 10z"/><path d="M4 4l16 16"/></svg>
+          <h3 data-t="t54">No ads</h3>
+          <p data-t="t55">Your family’s data is never sold or used for advertising.</p>
+        </li>
+        <li class="cartao revelar">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="6" width="17" height="12.5" rx="2"/><path d="m4 7 8 6 8-6"/></svg>
+          <h3 data-t="t58">No password to forget</h3>
+          <p data-t="t59">You sign in with a code sent to your email. It lasts 10 minutes, and you can sign out of every device at once.</p>
+        </li>
+      </ul>
+      <p class="cuidado-mais revelar"><a href="seguranca.html" class="botao" data-t="s9">Read everything about security</a></p>
+    </section>
+
+    <!-- 5b. Soberania digital, em resumo -->
+    <section class="soberania-resumo escuro" data-tema="escuro">
+      <div class="porque-fundo" aria-hidden="true"><div class="raios fracos" data-paralaxe="0.15"><i></i><i></i><i></i></div></div>
+      <div class="soberania-resumo-conteudo">
+        <p class="rotulo claro revelar" data-t="o0">Digital sovereignty</p>
+        <h2 class="revelar" data-t="o1">Whoever holds the servers holds the story</h2>
+        <p class="sub claro revelar" data-t="o2">Most family memories today live in the clouds of a handful of companies, which set the rules, the prices and what stays online. Iara was built another way: European infrastructure, common file formats and a family that can leave with everything at any time.</p>
+        <dl class="fatos revelar">
+          <div><dt data-t="o3">Paris</dt><dd data-t="o4">where the servers and the files are</dd></div>
+          <div><dt>0</dt><dd data-t="o5">advertisers, trackers or data brokers</dd></div>
+          <div><dt data-t="o6">1 file</dt><dd data-t="o7">to take the whole chest with you</dd></div>
+        </dl>
+        <a href="soberania.html" class="botao leve revelar" data-t="o8">About digital sovereignty</a>
+      </div>
+    </section>
+
+    <!-- 6. Por que a Iara existe: o texto acende conforme é lido -->
+    <section class="porque escuro" id="porque" data-tema="escuro">
+      <div class="porque-fundo" aria-hidden="true">
+        <div class="mancha m4" data-paralaxe="0.2"></div>
+        <div class="mancha m5" data-paralaxe="0.1"></div>
+      </div>
+      <div class="porque-conteudo">
+        <div class="coracao-mae c2 coracao-sobre" data-paralaxe="-0.12" role="img" aria-label="A heart drawn by hand by my mother" data-t-aria-label="q7"></div>
+        <p class="rotulo claro revelar" data-t="t60">About Iara</p>
+        <p class="acende" data-acende data-t="t62">Iara began with my great-grandfather Milad, who left Lebanon for Brasil. On the way, his papers and memories were scattered. Gathering what was left showed me how much a family loses without noticing.</p>
+        <p class="acende" data-acende data-t="q1">Studying International Relations, I saw that whoever controls digital infrastructure controls which stories survive. Iara is my answer: a sanctuary where each family keeps its own memory, under its own rules.</p>
+        <p class="acende" data-acende data-t="t63">That is why I turned the letters AI around. From Artificial Intelligence to Ancestral Intelligence, the kind that passes from one generation to the next.</p>
+        <p class="acende" data-acende data-t="t64">The name is my mother’s, Iara, who drew the shell, the key and the chest on this page.</p>
+        <ul class="porque-simbolos revelar" aria-hidden="true">
+          <li><svg class="simbolo-tridente" viewBox="0 0 24 24"><g fill="none" stroke="url(#ouro)" stroke-width="1"><path d="M12 2.6V21.4M6 4V8.6H18V4M4.4 6L6 3.8L7.6 6M10.4 4.8L12 2.6L13.6 4.8M16.4 6L18 3.8L19.6 6"/><path d="M5 13.2c2 2 4 2 7 0 3 2 5 2 7 0"/><path d="M6 17.8c2 2 4 2 6 0 2 2 4 2 6 0"/></g></svg><span data-t="q2">Protection</span></li>
+          <li><span class="simbolo desenho-concha"></span><span data-t="q3">Voices</span></li>
+          <li><span class="simbolo desenho-chave"></span><span data-t="q4">Hope</span></li>
+          <li><span class="simbolo desenho-bau"></span><span data-t="q5">Preservation</span></li>
+        </ul>
+        <blockquote class="porque-frase revelar"><p data-t="q6">The ultimate act of resistance is remembering where you came from.</p></blockquote>
+        <a href="historia.html" class="botao leve revelar porque-mais" data-t="p9">Read the story</a>
+      </div>
+    </section>
+
+    <!-- 6b. Perguntas frequentes -->
+    <section class="perguntas claro" id="perguntas" data-tema="claro">
+      <div class="perguntas-cabeca revelar">
+        <p class="rotulo" data-t="f0">Questions</p>
+        <h2 data-t="f1">What families ask before they begin</h2>
+      </div>
+      <div class="perguntas-lista">
+        <details class="pergunta revelar">
+          <summary data-t="f10">Does Iara ask for my documents?</summary>
+          <p data-t="f11">No. To create an account you give your name, your email and how you would like to be addressed, and you confirm you are 18 or over. Nothing else is asked. Certificates, letters or old papers only enter the chest if your family decides to keep them.</p>
+        </details>
+        <details class="pergunta revelar">
+          <summary data-t="f12">Who can see what we keep?</summary>
+          <p data-t="f13">Only the people your family invites, each according to their role. There are no public profiles, no feed and nothing that search engines can find.</p>
+        </details>
+        <details class="pergunta revelar">
+          <summary data-t="f14">Can the people who run Iara see our memories?</summary>
+          <p data-t="f15">Files stay in a private vault and open only through temporary links, and the database refuses to show one family’s memories to anyone outside it. End-to-end encryption, in which not even Iara could open them, is planned for a later version. Until it exists, we do not claim it.</p>
+        </details>
+        <details class="pergunta revelar">
+          <summary data-t="f16">What happens to our memories if Iara closes?</summary>
+          <p data-t="f17">They never depend on Iara alone. Whoever looks after the chest can download everything at any time, in common formats: photos, recordings and PDFs in folders by year, and the tree in GEDCOM, which FamilySearch, MyHeritage and Ancestry open.</p>
+        </details>
+        <details class="pergunta revelar">
+          <summary data-t="f18">Do I need to download an app?</summary>
+          <p data-t="f19">No. Iara opens in the phone’s browser. You can add it to the home screen, and it opens like any other app.</p>
+        </details>
+        <details class="pergunta revelar">
+          <summary data-t="f20">Can relatives who have passed away be in the tree?</summary>
+          <p data-t="f21">Yes. They join the tree without an account, with dates, places, nationalities and memories. Only the Guardian, Admins and Editors create and change these profiles.</p>
+        </details>
+        <details class="pergunta revelar">
+          <summary data-t="f22">Can children use Iara?</summary>
+          <p data-t="f23">Accounts are for people aged 18 and over. Children appear in the tree and in photos, looked after by the adults of the family.</p>
+        </details>
+        <details class="pergunta revelar">
+          <summary data-t="f24">Which languages does Iara speak?</summary>
+          <p data-t="f25">The app is in Portuguese for now, and this site is in English and Portuguese. More languages are on the way.</p>
+        </details>
+        <details class="pergunta revelar">
+          <summary data-t="f26">Can I leave a family or delete my account?</summary>
+          <p data-t="f27">Yes, at any time. Leaving a family keeps your account. Deleting the account removes your access, and your comments stay in the chest without your name. A Guardian first passes the guardianship to someone else.</p>
+        </details>
+      </div>
+    </section>
+
+    <!-- 7. Comece agora -->
+    <section class="comece escuro" id="comece" data-tema="escuro">
+      <div class="comece-fundo" aria-hidden="true">
+        <div class="raios fracos" data-paralaxe="0.2"><i></i><i></i><i></i></div>
+      </div>
+      <div class="comece-conteudo">
+        <h2 class="revelar" data-t="t65">Begin with a first memory</h2>
+        <p class="sub claro revelar" data-t="t66">Iara opens in your phone’s browser, with no app store.</p>
+        <span class="botao brilho grande revelar em-breve" data-t="c1">Coming soon</span>
+        <div class="instalar">
+          <div class="cartao escuro-vidro revelar">
+            <h3 data-t="t67">On iPhone</h3>
+            <p data-t="t68">In Safari, tap Share and then Add to Home Screen.</p>
+          </div>
+          <div class="cartao escuro-vidro revelar">
+            <h3 data-t="t69">On Android</h3>
+            <p data-t="t70">In Chrome, tap the three dots and then Add to Home screen.</p>
+          </div>
+        </div>
+        <div class="espera cartao escuro-vidro revelar"><h3 data-t="t71">Waiting list</h3><p data-t="c2">Iara is about to open. To hear when it does, write to <a href="mailto:contact@iara.family">contact@iara.family</a>.</p></div>
+      </div>
+      <footer class="rodape">
+        <span class="rodape-marca" role="img" aria-label="Iara">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><g fill="none" stroke="url(#ouro)" stroke-width="1.3"><path d="M12 2.6V21.4M6 4V8.6H18V4M4.4 6L6 3.8L7.6 6M10.4 4.8L12 2.6L13.6 4.8M16.4 6L18 3.8L19.6 6"/><path d="M5 13.2c2 2 4 2 7 0 3 2 5 2 7 0"/><path d="M6 17.8c2 2 4 2 6 0 2 2 4 2 6 0"/></g></svg>
+          <svg class="rodape-palavra" aria-hidden="true"><use href="#palavra"/></svg>
+        </span>
+        <nav>
+          <a href="seguranca.html" data-t="n2">Security</a>
+          <a href="soberania.html" data-t="n3">Sovereignty</a>
+          <a href="historia.html" data-t="n4">Our story</a>
+          <a href="mailto:contact@iara.family">contact@iara.family</a>
+        </nav>
+        <p data-t="t80">Iara · Digital legacy · 2026</p>
+      </footer>
+    </section>
+  </main>
+
+  <div class="lanterna" data-lanterna aria-hidden="true"></div>
+  <script src="textos-pt.js" defer></script>
+  <script src="comum.js" defer></script>
+  <script src="magia.js" defer></script>
+  <script src="profundo.js" defer></script>
+</body>
+</html>
