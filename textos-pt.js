@@ -596,7 +596,7 @@ window.TEXTOS_PT = {
   "ap124": "Para qualquer dúvida sobre privacidade: <a href=\"mailto:contact@iara.family\">contact@iara.family</a>, ou Configurações › Suporte.",
   "ap125": "<i>Este texto foi escrito em português. Se a tradução for diferente, vale a versão em português.</i>",
   "titulo-privacidade": "Iara · Aviso de privacidade",
-  "gd1": "Um farol vigiando o mar, desenhado à mão",
+  "gd1": "Uma bússola, desenhada à mão",
   "gd2": "Governança de dados",
   "gd3": "Como a Iara cuida, por dentro, dos dados das famílias todos os dias, e o que faz quando algo dá errado.",
   "gd4": "Última atualização em 26 de outubro de 2026 · Rascunho em revisão jurídica",
