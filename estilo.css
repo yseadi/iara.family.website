@@ -886,5 +886,5 @@ svg.icone-abertura.ic-desenho { width: 96px; height: 96px; margin-left: -6px; }
 }
 /* Página 404: uma tela só, no petróleo da abertura */
 .pagina-404 { background: #071a1e; }
-.pagina-404 .pagina-abertura { min-height: 100vh; min-height: 100svh; border-radius: 0; }
+.pagina-404 .pagina-abertura { min-height: 100vh; min-height: 100svh; border-radius: 0; align-items: flex-start; padding-top: clamp(120px, 22vh, 220px); }
 .pagina-404 .acoes { margin-top: 36px; justify-content: flex-start; }
