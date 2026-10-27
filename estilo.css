@@ -873,3 +873,14 @@ html[lang="pt-BR"] .sigla-en, html:not([lang="pt-BR"]) .sigla-pt { display: none
 .icone-abertura { display: block; margin-bottom: 30px; background: linear-gradient(170deg, #f6e3ae, #d4af62 55%, #b8902f); -webkit-mask: var(--m) center / contain no-repeat; mask: var(--m) center / contain no-repeat; filter: drop-shadow(0 0 14px rgba(212, 175, 98, 0.45)); }
 svg.icone-abertura { width: 64px; height: 64px; background: none; -webkit-mask: none; mask: none; }
 svg.icone-abertura.ic-desenho { width: 96px; height: 96px; margin-left: -6px; }
+/* História: retrato de quem escreve, em moldura, com os selos do Líbano e do Brasil */
+.retrato { position: relative; margin: 34px 0 0; width: min(100%, 300px); }
+.retrato-moldura { display: block; padding: 12px 12px 44px; background: #fbf8f1; border-radius: 3px; box-shadow: 0 1px 2px rgba(20, 25, 26, 0.08), 0 18px 40px -18px rgba(20, 25, 26, 0.35); transform: rotate(-2deg); }
+.retrato-moldura img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; }
+.selo { position: absolute; width: 62px; filter: drop-shadow(0 4px 8px rgba(20, 25, 26, 0.18)); }
+.selo svg { display: block; width: 100%; height: auto; }
+.selo-libano { right: -22px; top: 18px; transform: rotate(7deg); }
+.selo-brasil { right: 4px; bottom: -14px; transform: rotate(-5deg); }
+@media (max-width: 820px) {
+  .retrato { width: min(78%, 280px); margin: 26px auto 10px; }
+}

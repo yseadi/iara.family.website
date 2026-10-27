@@ -646,5 +646,6 @@ window.TEXTOS_PT = {
   "gd48": "Quem perceber algo estranho pode avisar pelo suporte ou por <a href=\"mailto:contact@iara.family\">contact@iara.family</a>, a qualquer hora.",
   "titulo-governanca": "Iara · Governança de dados",
   "tu75": "<i>Este texto foi escrito em português. Se a tradução for diferente, vale a versão em português.</i>",
-  "gd49": "<i>Este texto foi escrito em português. Se a tradução for diferente, vale a versão em português.</i>"
+  "gd49": "<i>Este texto foi escrito em português. Se a tradução for diferente, vale a versão em português.</i>",
+  "hiRetrato": "Yasmim Seadi, sentada entre folhas verdes grandes, com o queixo apoiado na mão"
 };
