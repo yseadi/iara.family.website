@@ -239,6 +239,10 @@ h3 { font-size: 23px; line-height: 1.15; font-variation-settings: "SOFT" 100, "o
 .rodape-palavra { width: 62px; height: 22px; color: #fff; }
 .rodape nav { display: flex; flex-wrap: wrap; gap: 6px 22px; }
 .rodape a { text-decoration: none; padding: 6px 0; }
+.rodape-redes { display: inline-flex; align-items: center; gap: 14px; }
+.rodape-redes a { display: inline-flex; padding: 2px 0; }
+.rodape-redes svg { width: 19px; height: 19px; }
+.rodape-redes a::after { content: none; }
 .rodape a:hover { color: #fff; }
 .rodape p { margin: 0; }
 
