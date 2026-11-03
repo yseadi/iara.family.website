@@ -240,9 +240,15 @@ h3 { font-size: 23px; line-height: 1.15; font-variation-settings: "SOFT" 100, "o
 .rodape nav { display: flex; flex-wrap: wrap; gap: 6px 22px; }
 .rodape a { text-decoration: none; padding: 6px 0; }
 .rodape-redes { display: inline-flex; align-items: center; gap: 14px; }
-.rodape-redes a { display: inline-flex; padding: 2px 0; }
+/* Redes no rodapé: cada ícone é um cubo que gira para cima ao passar o mouse (sem sublinhado) */
+.rodape-redes a { display: inline-flex; padding: 2px 0; perspective: 120px; }
+.rodape .rodape-redes a::after { content: none; }
+.rodape-redes .cubo { position: relative; display: block; width: 19px; height: 19px; transform-style: preserve-3d; transition: transform 0.55s cubic-bezier(.6,.1,.2,1); }
+.rodape-redes .face { position: absolute; inset: 0; display: flex; backface-visibility: hidden; transform: translateZ(9.5px); }
+.rodape-redes .face.baixo { transform: rotateX(-90deg) translateZ(9.5px); color: #fff; }
 .rodape-redes svg { width: 19px; height: 19px; }
-.rodape-redes a::after { content: none; }
+.rodape-redes a:hover .cubo, .rodape-redes a:focus-visible .cubo { transform: rotateX(90deg); }
+@media (prefers-reduced-motion: reduce) { .rodape-redes .cubo { transition: none; } .rodape-redes a:hover .cubo, .rodape-redes a:focus-visible .cubo { transform: none; } }
 .rodape a:hover { color: #fff; }
 .rodape p { margin: 0; }
 
