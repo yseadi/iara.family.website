@@ -1,6 +1,15 @@
 // Textos em português. O site abre em inglês e troca para estes pelo botão PT do topo.
 // Cada chave é o data-t (ou data-t-atributo) de um elemento nas páginas; o título de cada página usa a chave do seu data-titulo.
 window.TEXTOS_PT = {
+  "papelAdmin": "Admin",
+  "papelEditor": "Editor",
+  "nomeMilad": "Milad",
+  "nomeAnna": "Anna",
+  "nomeNatal": "Natal",
+  "nomeDiva": "Diva",
+  "nomeFelipe": "Felipe",
+  "nomeIara": "Iara",
+  "nomeYasmim": "Yasmim",
   "t69": "No Android",
   "t70": "No Chrome, toque nos três pontos e depois em Adicionar à tela inicial.",
   "t71": "Lista de espera",
@@ -138,7 +147,7 @@ window.TEXTOS_PT = {
   "f22": "Crianças podem usar a Iara?",
   "f23": "A conta é para quem tem 18 anos ou mais. Crianças aparecem na árvore e nas fotos, cuidadas pelos adultos da família.",
   "f24": "Em que línguas a Iara está?",
-  "f25": "Por enquanto, o app está em português, e este site em inglês e português. Outras línguas estão a caminho.",
+  "f25": "O app fala português, inglês, francês e árabe, e segue a língua do celular. Este site está nas mesmas quatro línguas.",
   "f26": "Posso sair de uma família ou apagar a minha conta?",
   "f27": "Sim, a qualquer momento. Sair de uma família mantém a sua conta. Apagar a conta tira o seu acesso, e os seus comentários ficam no baú sem o seu nome. O Guardião antes passa a guarda para outra pessoa.",
   "h19": "Comece o baú da sua família",
@@ -356,7 +365,7 @@ window.TEXTOS_PT = {
   "so68": "Vozes que viram texto, na Europa",
   "so69": "Transcrição das gravações com um programa que roda na Europa, para que as vozes nunca saiam de lá.",
   "so70": "Mais línguas",
-  "so71": "Hoje o app está em português. Outras línguas estão a caminho.",
+  "so71": "O app já fala português, inglês, francês e árabe. Outras línguas virão depois.",
   "so72": "Os próximos passos, na ordem em que pretendemos dar.",
   "so73": "Para onde vamos",
   "so74": "O que vem depois",
