@@ -16,13 +16,16 @@
 
   // A sigla: Artificial se desfaz letra por letra e Ancestral se forma no lugar, conforme a página desce.
   // O A de cada palavra e o I de Inteligência ficam, em dourado
-  const letras = (txt, cls) => `<span class="${cls}">${[...txt].map((c, i) => `<i${i === 0 ? ' class="inicial"' : ""}>${c}</i>`).join("")}</span>`;
+  // Em árabe as letras se ligam umas às outras: a palavra inteira se desfaz e se forma de uma vez
+  const letras = (txt, cls) => /[؀-ۿ]/.test(txt)
+    ? `<span class="${cls}"><i>${txt}</i></span>`
+    : `<span class="${cls}">${[...txt].map((c, i) => `<i${i === 0 ? ' class="inicial"' : ""}>${c}</i>`).join("")}</span>`;
   const sigla = $("[data-sigla]");
   const trocas = $$(".sigla-palavra").map((el) => {
     el.innerHTML = letras(el.dataset.de, "de") + letras(el.dataset.para, "para");
     return { de: $$(".de i", el), para: $$(".para i", el) };
   });
-  const marcaInicial = () => $$(".sigla-fixa").forEach((f) => { if (!f.querySelector(".inicial")) f.innerHTML = `<span class="inicial">${f.textContent[0]}</span>${f.textContent.slice(1)}`; });
+  const marcaInicial = () => $$(".sigla-fixa:not(.sem-inicial)").forEach((f) => { if (!f.querySelector(".inicial")) f.innerHTML = `<span class="inicial">${f.textContent[0]}</span>${f.textContent.slice(1)}`; });
   marcaInicial();
   const legendaDe = $(".sigla-de"), legendaPara = $(".sigla-para");
   const suave = (a, b, v) => { const t = limita((v - a) / (b - a)); return t * t * (3 - 2 * t); };
