@@ -684,5 +684,7 @@ window.TEXTOS_FR = {
   "sbCod9": "La base de données",
   "sbCod10": "Communauté internationale",
   "sbCod11": "Aucune, le code tourne dans Iara",
-  "sbCod12": "Aucune, le modèle vient d’Iara à Paris"
+  "sbCod12": "Aucune, le modèle vient d’Iara à Paris",
+  "sbCod13": "Séparation des voix sur le téléphone",
+  "sbCod14": "France · Communauté internationale"
 };

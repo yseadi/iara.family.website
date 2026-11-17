@@ -692,5 +692,7 @@ window.TEXTOS_PT = {
   "sbCod9": "O banco de dados",
   "sbCod10": "Comunidade internacional",
   "sbCod11": "Nenhum, o código roda dentro da Iara",
-  "sbCod12": "Nenhum, o modelo vem da Iara em Paris"
+  "sbCod12": "Nenhum, o modelo vem da Iara em Paris",
+  "sbCod13": "Separação de vozes no celular",
+  "sbCod14": "França · Comunidade internacional"
 };
