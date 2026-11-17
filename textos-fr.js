@@ -672,5 +672,17 @@ window.TEXTOS_FR = {
   "tu85": "<b>Loi et juridiction.</b> Cet accord est régi par les lois du Brasil, y compris la Loi générale de protection des données (LGPD) et le Code de défense du consommateur. Le for de la comarque de Novo Hamburgo/RS est désigné, sans préjudice du droit du consommateur de saisir le tribunal de son propre domicile.",
   "tu86": "<b>Contact.</b> Questions, demandes et signalements : écran Assistance, dans Réglages, ou <a href=\"mailto:contact@iara.family\">contact@iara.family</a>. La réponse arrive sur votre e-mail.",
   "tu87": "<i>Ce texte a été rédigé en portugais. En cas de divergence avec la traduction, la version portugaise prévaut.</i>",
-  "tu1": "Une plume qui signe"
+  "tu1": "Une plume qui signe",
+  "sbCod1": "L’app utilise aussi du code ouvert venu d’ailleurs. C’est du code copié dans Iara : il tourne dans l’app ou sur le téléphone et n’envoie rien à ceux qui l’ont écrit.",
+  "sbCod2": "Code ouvert utilisé dans l’app",
+  "sbCod3": "Code",
+  "sbCod4": "Origine",
+  "sbCod5": "Les écrans de l’app",
+  "sbCod6": "Lecteur de PDF",
+  "sbCod7": "Lecture des photos de documents sur le téléphone",
+  "sbCod8": "Transcription des voix sur le téléphone",
+  "sbCod9": "La base de données",
+  "sbCod10": "Communauté internationale",
+  "sbCod11": "Aucune, le code tourne dans Iara",
+  "sbCod12": "Aucune, le modèle vient d’Iara à Paris"
 };
