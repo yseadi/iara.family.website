@@ -485,6 +485,7 @@ h3 { font-size: 23px; line-height: 1.15; font-variation-settings: "SOFT" 100, "o
 .pt-linha, .fv-linha, .cp-linha { display: grid; gap: 16px; align-items: center; padding: 14px 0; border-bottom: 1px solid var(--linha); }
 .pt-linha { grid-template-columns: 1.2fr repeat(4, 1fr); }
 .fv-linha { grid-template-columns: 1.3fr 0.8fr 1fr 1.4fr; }
+.fv-sub { margin-top: 56px; }
 .cp-linha { grid-template-columns: 1fr 1.3fr 1.3fr; align-items: start; }
 .pt-cabeca, .fv-cabeca, .cp-cabeca { font-size: 12px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--tinta-3); }
 .pt-linha .s { color: var(--petroleo); }

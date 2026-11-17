@@ -680,5 +680,19 @@ window.TEXTOS_PT = {
   "gd54": "5. Revisão e versões",
   "gd55": "Esta política é revista uma vez por ano, e também sempre que entrar um fornecedor novo, mudar a lei ou acontecer um incidente.",
   "gd56": "As revisões desta política serão registradas em histórico de versões, com identificação da data de aprovação, das alterações realizadas e do responsável pela revisão. As modificações que afetarem materialmente o tratamento de dados pessoais ou os direitos dos titulares serão comunicadas de forma adequada, observadas as exigências legais aplicáveis.",
-  "gd57": "<i>Este texto foi escrito em português. Se a tradução for diferente, vale a versão em português.</i>"
+  "gd57": "<i>Este texto foi escrito em português. Se a tradução for diferente, vale a versão em português.</i>",
+  "sbCod1": "O app também usa código aberto de outras origens. É código copiado para dentro da Iara: ele roda no app ou no celular e não envia nada a quem o escreveu.",
+  "sbCod2": "Código aberto usado dentro do app",
+  "sbCod3": "Código",
+  "sbCod4": "Origem",
+  "sbCod5": "As telas do app",
+  "sbCod6": "Leitor de PDF",
+  "sbCod7": "Leitura de fotos de documentos no celular",
+  "sbCod8": "Transcrição de vozes no celular",
+  "sbCod9": "O banco de dados",
+  "sbCod10": "Comunidade internacional",
+  "sbCod11": "Nenhum, o código roda dentro da Iara",
+  "sbCod12": "Nenhum, o modelo vem da Iara em Paris",
+  "sbCod13": "Separação de vozes no celular",
+  "sbCod14": "França · Comunidade internacional"
 };
