@@ -362,6 +362,16 @@ h3 { font-size: 23px; line-height: 1.15; font-variation-settings: "SOFT" 100, "o
 .coluna:nth-child(3) { margin-top: 40px; }
 
 .legado { max-width: 1180px; margin: 0 auto; padding: 60px var(--lado) 140px; display: grid; grid-template-columns: 1fr 1fr; gap: 40px 64px; }
+/* Os presentes ocupam a largura toda, entre os ancestrais e os descendentes; os nomes vêm com as bandeiras de cada pessoa */
+.legado-bloco.agora { grid-column: 1 / -1; }
+.grupos-nomes { display: grid; grid-template-columns: 1fr 1fr; gap: 36px 64px; margin-top: 32px; }
+.grupo-nomes > p { font-size: 15px; line-height: 1.6; color: var(--tinta-3); margin: 0; max-width: 36em; }
+.nomes { list-style: none; margin: 18px 0 28px; padding: 0; display: grid; gap: 8px; }
+.grupo-nomes .nomes { margin-bottom: 0; }
+.nomes li { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 10px; font-family: var(--titulo); font-size: 22px; line-height: 1.3; font-variation-settings: "SOFT" 100, "opsz" 30; color: var(--tinta); }
+.escuro .nomes li { color: #fff; }
+.nomes bdi[lang="ar"] { color: var(--tinta-2); }
+.nomes .bandeiras { font-family: var(--corpo); font-size: 15px; letter-spacing: 0.08em; }
 .legado h3 { font-size: clamp(24px, 3vw, 30px); }
 .autoria { grid-column: 1 / -1; margin: 40px 0 0; padding-top: 28px; border-top: 1px solid var(--linha); font-family: var(--titulo); font-size: 22px; font-variation-settings: "SOFT" 100, "opsz" 30; }
 .pagina-historia .comece { padding-top: 140px; }
@@ -381,6 +391,8 @@ h3 { font-size: 23px; line-height: 1.15; font-variation-settings: "SOFT" 100, "o
   .coluna { display: contents; }
   .mural .foto { break-inside: avoid; margin-bottom: 14px; }
   .legado { grid-template-columns: 1fr; padding-bottom: 100px; }
+  .grupos-nomes { grid-template-columns: 1fr; gap: 28px; }
+  .nomes li { font-size: 19px; }
 }
 @media (prefers-reduced-motion: reduce) {
   .assinatura-milad .tinta, .sigla s::after { clip-path: none; transform: none; }
