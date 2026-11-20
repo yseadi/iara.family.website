@@ -66,28 +66,48 @@
     linhas.observe(d);
   });
 
-  // A carta de agradecimento abre junto com o scroll: primeiro a aba do envelope (o coração da mãe solta),
-  // depois o envelope desce e some enquanto a carta vai aparecendo de cima para baixo, até a borda de baixo da tela
+  // A carta de agradecimento, como o baú da home: o envelope para no meio da tela enquanto a página desce.
+  // Primeiro a aba abre e o coração da mãe solta (a carta fica dentro), depois a carta sobe de dentro do envelope
+  // e, quando já saiu quase toda, o envelope desce e some e a carta cresce até o tamanho de leitura.
+  // Tudo depende só da posição: subindo a página, a carta volta para dentro e o envelope fecha.
   const carta = document.querySelector(".carta");
   if (carta && !calmo) {
     carta.classList.add("anima");
+    const marco = carta.querySelector(".carta-marco");
     const cena = carta.querySelector(".envelope-cena");
-    const envelope = carta.querySelector(".envelope");
     const folha = carta.querySelector(".carta-sombra");
+    let A = 0, B = 0, C = 0, s0 = 1, topoFixo = 0, H = 0;
+    const mede = () => {
+      vh = innerHeight;
+      H = cena.offsetHeight;
+      topoFixo = vh / 2 - H / 2;
+      A = vh * 0.35;                              // a aba abre
+      B = topoFixo + H * 0.7 - vh * 0.18;         // a carta sobe até perto do topo da tela
+      C = vh * 0.35;                              // o envelope sai e a carta cresce
+      s0 = Math.min(1, (cena.offsetWidth * 0.92) / folha.offsetWidth);
+    };
     const abre = () => {
-      const c = cena.getBoundingClientRect();
-      const aba = limita((vh * 0.92 - c.bottom) / (vh * 0.22));
-      const sai = limita((vh * 0.92 - c.bottom - vh * 0.22) / (vh * 0.3));
-      const f = folha.getBoundingClientRect();
-      const revela = sai <= 0 ? 0 : Math.max(0, vh * 0.95 - f.top);
+      const d = topoFixo - marco.getBoundingClientRect().top;   // quanto a página desceu com o envelope parado
+      const aba = limita(d / A);
+      const sai = limita((d - A - B * 0.75) / C);
+      const segura = Math.max(0, Math.min(d, A));
+      const escala = s0 + (1 - s0) * sai;
       carta.style.setProperty("--aba", aba.toFixed(3));
       carta.style.setProperty("--sai", sai.toFixed(3));
-      carta.style.setProperty("--revela", `${Math.round(revela)}px`);
-      envelope.classList.toggle("aba-aberta", aba > 0.5);
+      carta.style.setProperty("--segura", `${Math.round(segura)}px`);
+      carta.style.setProperty("--escala", escala.toFixed(4));
+      // o que ainda está dentro do envelope fica escondido (corta na borda de baixo do envelope)
+      if (sai >= 1) carta.style.setProperty("--corte", "-60px");
+      else {
+        const f = folha.getBoundingClientRect();
+        const baseEnvelope = cena.getBoundingClientRect().bottom + sai * vh * 0.75;
+        const visivel = (baseEnvelope - f.top) / escala;
+        carta.style.setProperty("--corte", `${Math.round(folha.offsetHeight - Math.max(0, visivel))}px`);
+      }
     };
     addEventListener("scroll", () => requestAnimationFrame(abre), { passive: true });
-    addEventListener("resize", () => { vh = innerHeight; abre(); });
-    abre();
+    addEventListener("resize", () => { mede(); abre(); });
+    mede(); abre();
   }
 
   // Fotos com moldura: a imagem anda um pouco dentro dela

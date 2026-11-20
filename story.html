@@ -249,12 +249,19 @@
 
     <!-- Aos ancestrais, aos presentes e a quem vier depois -->
     <section class="legado carta claro" data-tema="claro">
-      <!-- Envelope fechado com o coração da mãe como lacre: abre quando chega na tela (profundo.js) -->
-      <div class="envelope-cena" aria-hidden="true">
+      <!-- Envelope fechado com o coração da mãe como lacre. Como o baú da home, ele fica parado no meio da tela
+           enquanto a página desce: a aba abre, a carta sobe de dentro dele e o envelope desce e sai (profundo.js).
+           Fundo e aba ficam atrás da carta; a frente do envelope fica na frente dela. -->
+      <span class="carta-marco" aria-hidden="true"></span>
+      <div class="envelope-cena envelope-tras" aria-hidden="true">
         <div class="envelope">
           <span class="envelope-fundo"></span>
-          <span class="envelope-bolso"></span>
           <span class="envelope-aba"></span>
+        </div>
+      </div>
+      <div class="envelope-cena envelope-frente" aria-hidden="true">
+        <div class="envelope">
+          <span class="envelope-bolso"></span>
           <span class="envelope-lacre"></span>
         </div>
       </div>
