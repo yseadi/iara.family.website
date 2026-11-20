@@ -57,7 +57,8 @@
   const linhas = new IntersectionObserver((itens) => itens.forEach((it) => {
     if (it.isIntersecting) { it.target.classList.add("visivel"); linhas.unobserve(it.target); }
   }), { rootMargin: "0px 0px -15% 0px" });
-  $$("main > .claro + .claro").forEach((s) => {
+  // A mesma linha separa os tempos do agradecimento (ancestrais, presentes, descendentes) e a assinatura
+  $$("main > .claro + .claro, .legado-bloco + .legado-bloco, .legado-bloco + .autoria").forEach((s) => {
     const d = document.createElement("span");
     d.className = "divisor";
     d.setAttribute("aria-hidden", "true");
