@@ -14,12 +14,20 @@
   <meta property="og:image" content="https://iara.family/imagens/compartilhar.png">
   <meta property="og:url" content="https://iara.family">
   <meta property="og:type" content="website">
-  <link rel="icon" href="imagens/icone.svg" type="image/svg+xml">
-  <link rel="icon" href="imagens/icone-32.png" type="image/png" sizes="32x32">
-  <link rel="apple-touch-icon" href="imagens/icone-180.png">
-  <link rel="preload" href="fontes/fraunces.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="fontes/rethink-sans.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="estilo.css">
+  <!-- linguas -->
+  <link rel="canonical" href="https://iara.family/">
+  <link rel="alternate" hreflang="en" href="https://iara.family/en/">
+  <link rel="alternate" hreflang="pt-BR" href="https://iara.family/pt/">
+  <link rel="alternate" hreflang="fr" href="https://iara.family/fr/">
+  <link rel="alternate" hreflang="ar" href="https://iara.family/ar/">
+  <link rel="alternate" hreflang="x-default" href="https://iara.family/">
+  <!-- /linguas -->
+  <link rel="icon" href="/imagens/icone.svg" type="image/svg+xml">
+  <link rel="icon" href="/imagens/icone-32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="/imagens/icone-180.png">
+  <link rel="preload" href="/fontes/fraunces.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fontes/rethink-sans.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/estilo.css">
   <!-- Vindo de outra página do site: a tela de carregamento já aparece antes do primeiro quadro -->
   <script>try { if (sessionStorage.getItem("iara-troca")) { sessionStorage.removeItem("iara-troca"); document.documentElement.classList.add("carregando"); } } catch (e) {}</script>
 </head>
@@ -50,11 +58,11 @@
       <svg class="topo-palavra" aria-hidden="true"><use href="#palavra"/></svg>
     </a>
     <nav class="topo-nav" id="menu" data-menu aria-label="Main" data-t-aria-label="n0">
-      <a href="./" class="so-celular" data-t="n6" aria-current="page">Home</a>
-      <a href="./#como" data-t="n1">How it works</a>
-      <a href="seguranca.html" data-t="n2">Security</a>
-      <a href="soberania.html" data-t="n3">Sovereignty</a>
-      <a href="historia.html" data-t="n4">Our story</a>
+      <a href="/" class="so-celular" data-t="n6" aria-current="page">Home</a>
+      <a href="/#como" data-t="n1">How it works</a>
+      <a href="/security" data-t="n2">Security</a>
+      <a href="/sovereignty" data-t="n3">Sovereignty</a>
+      <a href="/story" data-t="n4">Our story</a>
     </nav>
     <div class="topo-acoes">
       <button type="button" class="idioma" data-idioma aria-label="Ver em português" lang="pt">PT</button>
@@ -101,19 +109,19 @@
           <span class="pilar-numero">I</span>
           <h3 data-t="p1">Security comes first</h3>
           <p data-t="p2">Iara never asks for identity documents. Each family is closed, and only the people it invites can see what it keeps.</p>
-          <a href="seguranca.html" class="seta" data-t="p3">How we protect it</a>
+          <a href="/security" class="seta" data-t="p3">How we protect it</a>
         </li>
         <li class="revelar">
           <span class="pilar-numero">II</span>
           <h3 data-t="p4">Outside the big tech clouds</h3>
           <p data-t="p5">Servers in Paris, European companies, no advertising and nothing for sale. The family can leave with everything at any time.</p>
-          <a href="soberania.html" class="seta" data-t="p6">About digital sovereignty</a>
+          <a href="/sovereignty" class="seta" data-t="p6">About digital sovereignty</a>
         </li>
         <li class="revelar">
           <span class="pilar-numero">III</span>
           <h3 data-t="p7">Born from a family story</h3>
           <p data-t="p8">Milad, the great-grandfather of the founder, left Lebanon for Brasil, and much of his story was scattered on the way. Iara exists so that this does not happen again.</p>
-          <a href="historia.html" class="seta" data-t="p9">Read the story</a>
+          <a href="/story" class="seta" data-t="p9">Read the story</a>
         </li>
       </ul>
     </section>
@@ -132,7 +140,7 @@
             <div class="bau-luz" aria-hidden="true"></div>
             <div class="bau-desenho" role="img" aria-label="Hand-drawn chest" data-t-aria-label="a0"></div>
                         <div class="memoria-voa foto" data-voa="-1.1,-0.9,-8">
-              <img class="foto-cor" src="imagens/historia/ceia.webp" alt="" loading="lazy" decoding="async">
+              <img class="foto-cor" src="/imagens/historia/ceia.webp" alt="" loading="lazy" decoding="async">
               <span class="legenda" data-t="t9"><b>Christmas dinner</b>At grandma’s</span>
             </div>
             <div class="memoria-voa documento" data-voa="1.15,-0.75,7">
@@ -186,13 +194,13 @@
         <div class="celular-fixo">
           <div class="celular" data-celular>
             <div class="celular-tela">
-              <img src="imagens/telas/bau-en.webp" data-src-pt="imagens/telas/bau-pt.webp" data-src-ar="imagens/telas/bau-ar.webp" alt="The Seadi family’s chest, with Milad’s photo from this day at the top" data-t-alt="c105" class="tela ativa" data-tela="1" width="600" height="1298">
-              <img src="imagens/telas/guardar-en.webp" data-src-pt="imagens/telas/guardar-pt.webp" data-src-ar="imagens/telas/guardar-ar.webp" alt="The add button open, with the options to add a person, a file, an audio or a photo" data-t-alt="c108" class="tela" data-tela="2" width="600" height="1298" loading="lazy">
-              <img src="imagens/telas/gravar-en.webp" data-src-pt="imagens/telas/gravar-pt.webp" data-src-ar="imagens/telas/gravar-ar.webp" alt="Recording screen with the sound wave and the timer" data-t-alt="c111" class="tela" data-tela="3" width="600" height="1298" loading="lazy">
-              <img src="imagens/telas/conversa-en.webp" data-src-pt="imagens/telas/conversa-pt.webp" data-src-ar="imagens/telas/conversa-ar.webp" alt="An open photo, Milad with the clarinet, with reactions and comments from the family" data-t-alt="c114" class="tela" data-tela="4" width="600" height="1298" loading="lazy">
-              <img src="imagens/telas/convidar-en.webp" data-src-pt="imagens/telas/convidar-pt.webp" data-src-ar="imagens/telas/convidar-ar.webp" alt="Invitation for Samuel, with the role chosen before creating the link" data-t-alt="c117" class="tela" data-tela="5" width="600" height="1298" loading="lazy">
-              <img src="imagens/telas/mural-en.webp" data-src-pt="imagens/telas/mural-pt.webp" data-src-ar="imagens/telas/mural-ar.webp" alt="The gallery in mural view" data-t-alt="c120" class="tela" data-tela="6" width="600" height="1298" loading="lazy">
-              <img src="imagens/telas/exportar-en.webp" data-src-pt="imagens/telas/exportar-pt.webp" data-src-ar="imagens/telas/exportar-ar.webp" alt="The screen to export the whole chest" data-t-alt="c123" class="tela" data-tela="7" width="600" height="1298" loading="lazy">
+              <img src="/imagens/telas/bau-en.webp" data-src-pt="/imagens/telas/bau-pt.webp" data-src-ar="/imagens/telas/bau-ar.webp" alt="The Seadi family’s chest, with Milad’s photo from this day at the top" data-t-alt="c105" class="tela ativa" data-tela="1" width="600" height="1298">
+              <img src="/imagens/telas/guardar-en.webp" data-src-pt="/imagens/telas/guardar-pt.webp" data-src-ar="/imagens/telas/guardar-ar.webp" alt="The add button open, with the options to add a person, a file, an audio or a photo" data-t-alt="c108" class="tela" data-tela="2" width="600" height="1298" loading="lazy">
+              <img src="/imagens/telas/gravar-en.webp" data-src-pt="/imagens/telas/gravar-pt.webp" data-src-ar="/imagens/telas/gravar-ar.webp" alt="Recording screen with the sound wave and the timer" data-t-alt="c111" class="tela" data-tela="3" width="600" height="1298" loading="lazy">
+              <img src="/imagens/telas/conversa-en.webp" data-src-pt="/imagens/telas/conversa-pt.webp" data-src-ar="/imagens/telas/conversa-ar.webp" alt="An open photo, Milad with the clarinet, with reactions and comments from the family" data-t-alt="c114" class="tela" data-tela="4" width="600" height="1298" loading="lazy">
+              <img src="/imagens/telas/convidar-en.webp" data-src-pt="/imagens/telas/convidar-pt.webp" data-src-ar="/imagens/telas/convidar-ar.webp" alt="Invitation for Samuel, with the role chosen before creating the link" data-t-alt="c117" class="tela" data-tela="5" width="600" height="1298" loading="lazy">
+              <img src="/imagens/telas/mural-en.webp" data-src-pt="/imagens/telas/mural-pt.webp" data-src-ar="/imagens/telas/mural-ar.webp" alt="The gallery in mural view" data-t-alt="c120" class="tela" data-tela="6" width="600" height="1298" loading="lazy">
+              <img src="/imagens/telas/exportar-en.webp" data-src-pt="/imagens/telas/exportar-pt.webp" data-src-ar="/imagens/telas/exportar-ar.webp" alt="The screen to export the whole chest" data-t-alt="c123" class="tela" data-tela="7" width="600" height="1298" loading="lazy">
             </div>
           </div>
         </div>
@@ -327,7 +335,7 @@
           <p data-t="t59">You sign in with a code sent to your email. It lasts 10 minutes, and you can sign out of every device at once.</p>
         </li>
       </ul>
-      <p class="cuidado-mais revelar"><a href="seguranca.html" class="botao" data-t="s9">Read everything about security</a></p>
+      <p class="cuidado-mais revelar"><a href="/security" class="botao" data-t="s9">Read everything about security</a></p>
     </section>
 
     <!-- 5b. Soberania digital, em resumo -->
@@ -342,7 +350,7 @@
           <div><dt>0</dt><dd data-t="o5">advertisers, trackers or data brokers</dd></div>
           <div><dt data-t="o6">1 file</dt><dd data-t="o7">to take the whole chest with you</dd></div>
         </dl>
-        <a href="soberania.html" class="botao leve revelar" data-t="o8">About digital sovereignty</a>
+        <a href="/sovereignty" class="botao leve revelar" data-t="o8">About digital sovereignty</a>
       </div>
     </section>
 
@@ -366,7 +374,7 @@
           <li><span class="simbolo desenho-bau"></span><span data-t="q5">Preservation</span></li>
         </ul>
         <blockquote class="porque-frase revelar"><p data-t="q6">The ultimate act of resistance is remembering where you came from.</p></blockquote>
-        <a href="historia.html" class="botao leve revelar porque-mais" data-t="p9">Read the story</a>
+        <a href="/story" class="botao leve revelar porque-mais" data-t="p9">Read the story</a>
       </div>
     </section>
 
@@ -443,12 +451,12 @@
           <svg class="rodape-palavra" aria-hidden="true"><use href="#palavra"/></svg>
         </span>
         <nav>
-          <a href="seguranca.html" data-t="n2">Security</a>
-          <a href="soberania.html" data-t="n3">Sovereignty</a>
-          <a href="historia.html" data-t="n4">Our story</a>
-          <a href="termos.html" data-t="t78">Terms of use</a>
-          <a href="privacidade.html" data-t="t79">Privacy notice</a>
-          <a href="governanca.html" data-t="t81">Data governance</a>
+          <a href="/security" data-t="n2">Security</a>
+          <a href="/sovereignty" data-t="n3">Sovereignty</a>
+          <a href="/story" data-t="n4">Our story</a>
+          <a href="/terms" data-t="t78">Terms of use</a>
+          <a href="/privacy" data-t="t79">Privacy notice</a>
+          <a href="/governance" data-t="t81">Data governance</a>
           <a href="mailto:contact@iara.family">contact@iara.family</a>
           <span class="rodape-redes">
             <a href="https://www.instagram.com/iara.family" target="_blank" rel="noopener" aria-label="Instagram"><span class="cubo" aria-hidden="true"><span class="face"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor" stroke="none"/></svg></span><span class="face baixo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor" stroke="none"/></svg></span></span></a>
@@ -461,11 +469,11 @@
   </main>
 
   <div class="lanterna" data-lanterna aria-hidden="true"></div>
-  <script src="textos-pt.js" defer></script>
-  <script src="textos-fr.js" defer></script>
-  <script src="textos-ar.js" defer></script>
-  <script src="comum.js" defer></script>
-  <script src="magia.js" defer></script>
-  <script src="profundo.js" defer></script>
+  <script src="/textos-pt.js" defer></script>
+  <script src="/textos-fr.js" defer></script>
+  <script src="/textos-ar.js" defer></script>
+  <script src="/comum.js" defer></script>
+  <script src="/magia.js" defer></script>
+  <script src="/profundo.js" defer></script>
 </body>
 </html>

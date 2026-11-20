@@ -1,5 +1,8 @@
 // Partes de todas as páginas: o idioma (o site nasce em inglês e o botão do topo abre a lista com inglês,
 // português, francês e árabe, lembrando a escolha; em árabe a página corre da direita para a esquerda) e o menu do celular. Depois de cada troca de idioma avisa com o evento "idioma".
+// Cada língua tem o próprio endereço, para mandar direto: iara.family/ar/story, iara.family/pt/privacy. Os endereços
+// sem língua (iara.family/story) abrem na última língua escolhida, ou em inglês. As páginas das pastas en/ pt/ fr/ ar/
+// são cópias geradas por scripts/linguas.py.
 (() => {
   const $$ = (s) => [...document.querySelectorAll(s)];
   // Cada página nova começa do topo, a não ser que o link aponte para um trecho
@@ -39,9 +42,23 @@
       setTimeout(() => { location.href = url.href; }, 650);
     });
   }
+  // Endereços: o nome de cada página é o mesmo em todas as línguas. Os nomes antigos (historia.html, termos.html) ainda são reconhecidos
+  const PAGINAS = {
+    "": "", index: "", story: "story", historia: "story", security: "security", seguranca: "security",
+    sovereignty: "sovereignty", soberania: "sovereignty", terms: "terms", termos: "terms",
+    privacy: "privacy", privacidade: "privacy", governance: "governance", governanca: "governance",
+  };
+  const LINGUA_NO_ENDERECO = /^\/(en|pt|fr|ar)(?=\/|$)/;
+  const paginaDe = (caminho) => PAGINAS[caminho.replace(LINGUA_NO_ENDERECO, "").replace(/^\/+|\/+$/g, "").replace(/\.html$/, "")];
+  const linguaDoEndereco = location.pathname.match(LINGUA_NO_ENDERECO)?.[1];
   const ATRIBUTOS = ["aria-label", "alt", "placeholder"];
   const chaveTitulo = document.documentElement.dataset.titulo || "titulo";
+  // A página de "não encontrada" aparece em qualquer endereço: ela não muda o endereço
+  const estaPagina = chaveTitulo === "titulo-404" ? undefined : paginaDe(location.pathname);
+  const descricao = document.querySelector('meta[name="description"]');
+  const chaveDescricao = chaveTitulo.replace("titulo", "descricao");
   const ingles = { [chaveTitulo]: document.title };
+  if (descricao) ingles[chaveDescricao] = descricao.content;
   $$("[data-t]").forEach((el) => { ingles[el.dataset.t] ??= el.innerHTML; });
   for (const at of ATRIBUTOS) $$(`[data-t-${at}]`).forEach((el) => { ingles[el.getAttribute(`data-t-${at}`)] = el.getAttribute(at); });
   // Imagens com versão em outra língua (as telas do app): data-src-pt, data-src-fr, data-src-ar guardam as outras
@@ -96,18 +113,37 @@
     const chaveSrc = "src" + idioma[0].toUpperCase() + idioma.slice(1);
     $$("img[data-src-en]").forEach((el) => el.setAttribute("src", el.dataset[chaveSrc] || el.dataset.srcEn));
     document.title = pega(chaveTitulo);
+    if (descricao) descricao.content = pega(chaveDescricao);
     document.documentElement.lang = i.lang;
     document.documentElement.dir = i.dir || "ltr";
     botao.textContent = i.sigla;
     botao.setAttribute("aria-label", `${ROTULO[idioma]}: ${i.nome}`);
     lista.setAttribute("aria-label", ROTULO[idioma]);
     lista.querySelectorAll("button").forEach((b) => b.setAttribute("aria-checked", String(b.dataset.codigo === idioma)));
+    enderecos(idioma);
     document.dispatchEvent(new Event("idioma"));
   };
-  // A língua vem do link (?idioma=fr), depois da última escolha; sem nada, o site abre em inglês
+  // Os links entre as páginas levam a língua junto, e o endereço na barra mostra a língua da página
+  const endereco = (idioma, pagina) => (linguaDoEndereco || idioma !== "en" ? `/${idioma}/` : "/") + pagina;
+  const enderecos = (idioma) => {
+    $$("a[href]").forEach((a) => {
+      const url = new URL(a.getAttribute("href"), location.href);
+      if (url.origin !== location.origin) return;
+      const pagina = paginaDe(url.pathname);
+      if (pagina !== undefined) a.setAttribute("href", endereco(idioma, pagina) + url.hash);
+    });
+    if (estaPagina === undefined) return;
+    const busca = new URLSearchParams(location.search);
+    busca.delete("idioma");
+    const novo = endereco(idioma, estaPagina) + (busca.size ? `?${busca}` : "") + location.hash;
+    if (novo !== location.pathname + location.search + location.hash) {
+      try { history.replaceState(history.state, "", novo); } catch {}
+    }
+  };
+  // A língua vem do endereço (/ar/story, ou o antigo ?idioma=fr), depois da última escolha; sem nada, o site abre em inglês
   let idioma = "en";
   try { idioma = localStorage.getItem("idioma") || "en"; } catch {}
-  const doLink = new URLSearchParams(location.search).get("idioma");
+  const doLink = linguaDoEndereco || new URLSearchParams(location.search).get("idioma");
   if (doLink in IDIOMAS) { idioma = doLink; try { localStorage.setItem("idioma", idioma); } catch {} }
   if (!(idioma in IDIOMAS)) idioma = "en";
   aplica(idioma);
