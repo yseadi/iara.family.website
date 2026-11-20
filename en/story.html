@@ -250,12 +250,19 @@
 
     <!-- Aos ancestrais, aos presentes e a quem vier depois -->
     <section class="legado carta claro" data-tema="claro">
-      <!-- Envelope fechado com o coração da mãe como lacre: abre quando chega na tela (profundo.js) -->
-      <div class="envelope-cena" aria-hidden="true">
+      <!-- Envelope fechado com o coração da mãe como lacre. Como o baú da home, ele fica parado no meio da tela
+           enquanto a página desce: a aba abre, a carta sobe de dentro dele e o envelope desce e sai (profundo.js).
+           Fundo e aba ficam atrás da carta; a frente do envelope fica na frente dela. -->
+      <span class="carta-marco" aria-hidden="true"></span>
+      <div class="envelope-cena envelope-tras" aria-hidden="true">
         <div class="envelope">
           <span class="envelope-fundo"></span>
-          <span class="envelope-bolso"></span>
           <span class="envelope-aba"></span>
+        </div>
+      </div>
+      <div class="envelope-cena envelope-frente" aria-hidden="true">
+        <div class="envelope">
+          <span class="envelope-bolso"></span>
           <span class="envelope-lacre"></span>
         </div>
       </div>
@@ -319,8 +326,8 @@
             <div class="grupo-nomes">
               <p data-t="hiInfancia">To my childhood friends, who stood by me while I was still discovering and building part of who I am today, and who embrace me in all my skins:</p>
               <ul class="nomes">
-                <li><bdi>Daniela Mombach dos <span class="junto">Reis <span class="bandeiras" aria-hidden="true">🇧🇷🇩🇪🇱🇺</span></span></bdi></li>
-                <li><bdi>Raissa Schmitt <span class="junto">Fontoura <span class="bandeiras" aria-hidden="true">🇧🇷🇩🇪</span></span></bdi></li>
+                <li><bdi>Daniela dos Reis <span class="junto">Mombach <span class="bandeiras" aria-hidden="true">🇧🇷🇩🇪🇵🇹🇱🇺</span></span></bdi></li>
+                <li><bdi>Raíssa Schmitt <span class="junto">Fontoura <span class="bandeiras" aria-hidden="true">🇧🇷🇩🇪🇦🇷</span></span></bdi></li>
                 <li><bdi>Eduarda Dário <span class="junto">Petry <span class="bandeiras" aria-hidden="true">🇧🇷🇮🇹🇩🇪🇵🇹</span></span></bdi></li>
                 <li><bdi>Fernanda Sant’Anna <span class="junto">Dapper <span class="bandeiras" aria-hidden="true">🇧🇷🇵🇹🇩🇪🇪🇸</span></span></bdi></li>
                 <li><bdi>Manuela Baptista <span class="junto">Massochin <span class="bandeiras" aria-hidden="true">🇧🇷🇮🇹</span></span></bdi></li>
