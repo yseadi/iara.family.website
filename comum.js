@@ -1,7 +1,7 @@
 // Partes de todas as páginas: o idioma (o site nasce em inglês e o botão do topo abre a lista com inglês,
-// português, francês e árabe, lembrando a escolha; em árabe a página corre da direita para a esquerda) e o menu do celular. Depois de cada troca de idioma avisa com o evento "idioma".
+// português, francês e árabe; em árabe a página corre da direita para a esquerda) e o menu do celular. Depois de cada troca de idioma avisa com o evento "idioma".
 // Cada língua tem o próprio endereço, para mandar direto: iara.family/ar/story, iara.family/pt/privacy. Os endereços
-// sem língua (iara.family/story) abrem na última língua escolhida, ou em inglês. As páginas das pastas en/ pt/ fr/ ar/
+// sem língua (iara.family, iara.family/story) abrem SEMPRE em inglês. As páginas das pastas en/ pt/ fr/ ar/
 // são cópias geradas por scripts/linguas.py.
 (() => {
   const $$ = (s) => [...document.querySelectorAll(s)];
@@ -140,12 +140,12 @@
       try { history.replaceState(history.state, "", novo); } catch {}
     }
   };
-  // A língua vem do endereço (/ar/story, ou o antigo ?idioma=fr), depois da última escolha; sem nada, o site abre em inglês
-  let idioma = "en";
-  try { idioma = localStorage.getItem("idioma") || "en"; } catch {}
+  // A língua vem só do endereço (/ar/story, ou o antigo ?idioma=fr); sem língua no endereço, o site abre sempre em inglês.
+  // Nada fica guardado no navegador: quem abriu um link em árabe e depois entra em iara.family vê o inglês.
+  // (Apaga a escolha que versões antigas do site guardavam.)
+  try { localStorage.removeItem("idioma"); } catch {}
   const doLink = linguaDoEndereco || new URLSearchParams(location.search).get("idioma");
-  if (doLink in IDIOMAS) { idioma = doLink; try { localStorage.setItem("idioma", idioma); } catch {} }
-  if (!(idioma in IDIOMAS)) idioma = "en";
+  let idioma = doLink in IDIOMAS ? doLink : "en";
   aplica(idioma);
   botao.addEventListener("click", () => abreLista(lista.hidden));
   lista.addEventListener("click", (e) => {
@@ -155,7 +155,6 @@
     botao.focus();
     if (b.dataset.codigo === idioma) return;
     idioma = b.dataset.codigo;
-    try { localStorage.setItem("idioma", idioma); } catch {}
     document.documentElement.classList.add("trocado");
     aplica(idioma);
   });
