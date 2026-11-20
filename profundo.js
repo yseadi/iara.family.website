@@ -57,13 +57,24 @@
   const linhas = new IntersectionObserver((itens) => itens.forEach((it) => {
     if (it.isIntersecting) { it.target.classList.add("visivel"); linhas.unobserve(it.target); }
   }), { rootMargin: "0px 0px -15% 0px" });
-  $$("main > .claro + .claro").forEach((s) => {
+  // A mesma linha separa os tempos do agradecimento (ancestrais, presentes, descendentes)
+  $$("main > .claro + .claro, .legado-bloco + .legado-bloco").forEach((s) => {
     const d = document.createElement("span");
     d.className = "divisor";
     d.setAttribute("aria-hidden", "true");
     s.prepend(d);
     linhas.observe(d);
   });
+
+  // A carta de agradecimento: o envelope abre quando aparece inteiro na tela, e a carta sai de dentro
+  const carta = document.querySelector(".carta");
+  if (carta && !calmo) {
+    carta.classList.add("anima");
+    const cena = carta.querySelector(".envelope-cena");
+    new IntersectionObserver((itens, o) => {
+      if (itens[0].isIntersecting) { setTimeout(() => carta.classList.add("aberta"), 500); o.disconnect(); }
+    }, { threshold: 0.9 }).observe(cena);
+  }
 
   // Fotos com moldura: a imagem anda um pouco dentro dela
   const molduras = $$(".moldura img");
