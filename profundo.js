@@ -66,14 +66,28 @@
     linhas.observe(d);
   });
 
-  // A carta de agradecimento: o envelope abre quando aparece inteiro na tela, e a carta sai de dentro
+  // A carta de agradecimento abre junto com o scroll: primeiro a aba do envelope (o coração da mãe solta),
+  // depois o envelope desce e some enquanto a carta vai aparecendo de cima para baixo, até a borda de baixo da tela
   const carta = document.querySelector(".carta");
   if (carta && !calmo) {
     carta.classList.add("anima");
     const cena = carta.querySelector(".envelope-cena");
-    new IntersectionObserver((itens, o) => {
-      if (itens[0].isIntersecting) { setTimeout(() => carta.classList.add("aberta"), 500); o.disconnect(); }
-    }, { threshold: 0.9 }).observe(cena);
+    const envelope = carta.querySelector(".envelope");
+    const folha = carta.querySelector(".carta-sombra");
+    const abre = () => {
+      const c = cena.getBoundingClientRect();
+      const aba = limita((vh * 0.92 - c.bottom) / (vh * 0.22));
+      const sai = limita((vh * 0.92 - c.bottom - vh * 0.22) / (vh * 0.3));
+      const f = folha.getBoundingClientRect();
+      const revela = sai <= 0 ? 0 : Math.max(0, vh * 0.95 - f.top);
+      carta.style.setProperty("--aba", aba.toFixed(3));
+      carta.style.setProperty("--sai", sai.toFixed(3));
+      carta.style.setProperty("--revela", `${Math.round(revela)}px`);
+      envelope.classList.toggle("aba-aberta", aba > 0.5);
+    };
+    addEventListener("scroll", () => requestAnimationFrame(abre), { passive: true });
+    addEventListener("resize", () => { vh = innerHeight; abre(); });
+    abre();
   }
 
   // Fotos com moldura: a imagem anda um pouco dentro dela
