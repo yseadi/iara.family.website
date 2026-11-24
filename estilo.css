@@ -147,7 +147,7 @@ h3 { font-size: 23px; line-height: 1.15; font-variation-settings: "SOFT" 100, "o
 .bau-luz { position: absolute; z-index: 1; width: min(70vw, 440px); aspect-ratio: 1; border-radius: 50%; background: radial-gradient(circle, rgba(212, 175, 98, 0.28), transparent 62%); filter: blur(30px); opacity: var(--brilho, 0); }
 .memoria-voa { position: absolute; z-index: 3; width: 196px; border-radius: 22px; padding: 12px; background: var(--vidro); backdrop-filter: var(--vidro-desfoque); -webkit-backdrop-filter: var(--vidro-desfoque); box-shadow: var(--vidro-borda), 0 24px 50px -20px rgba(14, 50, 56, 0.35); will-change: transform, opacity; font-size: 13px; }
 .memoria-voa.foto { width: 248px; }
-.foto-cor.doc-real { object-position: 50% 18%; background: #fff; }
+.foto-cor.doc-real { height: 96px; object-position: 50% 18%; background: #fff; }
 .memoria-voa .legenda { display: block; color: var(--tinta-2); line-height: 1.35; }
 .memoria-voa .legenda b { display: block; font-family: var(--titulo); font-weight: 400; font-size: 17px; color: var(--tinta); }
 .foto-cor { display: block; width: 100%; height: 150px; object-fit: cover; object-position: 50% 45%; border-radius: 14px; background: #d9b77d; margin-bottom: 10px; }
