@@ -146,9 +146,11 @@ h3 { font-size: 23px; line-height: 1.15; font-variation-settings: "SOFT" 100, "o
 .bau-desenho { position: relative; z-index: 2; width: min(46vw, 300px); aspect-ratio: 576 / 408; background: var(--petroleo); opacity: 0.85; -webkit-mask: url(imagens/bau.png) center / contain no-repeat; mask: url(imagens/bau.png) center / contain no-repeat; transform: scale(calc(0.92 + var(--brilho, 0) * 0.1)); transition: transform 0.2s; }
 .bau-luz { position: absolute; z-index: 1; width: min(70vw, 440px); aspect-ratio: 1; border-radius: 50%; background: radial-gradient(circle, rgba(212, 175, 98, 0.28), transparent 62%); filter: blur(30px); opacity: var(--brilho, 0); }
 .memoria-voa { position: absolute; z-index: 3; width: 196px; border-radius: 22px; padding: 12px; background: var(--vidro); backdrop-filter: var(--vidro-desfoque); -webkit-backdrop-filter: var(--vidro-desfoque); box-shadow: var(--vidro-borda), 0 24px 50px -20px rgba(14, 50, 56, 0.35); will-change: transform, opacity; font-size: 13px; }
+.memoria-voa.foto { width: 248px; }
+.foto-cor.doc-real { height: 96px; object-position: 50% 18%; background: #fff; }
 .memoria-voa .legenda { display: block; color: var(--tinta-2); line-height: 1.35; }
 .memoria-voa .legenda b { display: block; font-family: var(--titulo); font-weight: 400; font-size: 17px; color: var(--tinta); }
-.foto-cor { display: block; width: 100%; height: 104px; object-fit: cover; object-position: 50% 45%; border-radius: 14px; background: #d9b77d; margin-bottom: 10px; }
+.foto-cor { display: block; width: 100%; height: 150px; object-fit: cover; object-position: 50% 45%; border-radius: 14px; background: #d9b77d; margin-bottom: 10px; }
 .linhas { display: grid; gap: 7px; padding: 14px 12px; border-radius: 14px; background: #efe5cf; margin-bottom: 10px; }
 .linhas i { height: 4px; border-radius: 2px; background: #c9b089; }
 .linhas i:nth-child(1) { width: 50%; margin: 0 auto 4px; height: 6px; }
@@ -210,6 +212,9 @@ h3 { font-size: 23px; line-height: 1.15; font-variation-settings: "SOFT" 100, "o
 .no small { font-size: 13px; color: var(--tinta-3); white-space: nowrap; }
 .no.convidar small { color: var(--petroleo); }
 .no.voce i { background: var(--petroleo); color: #fff; }
+/* quem tem foto: o retrato ocupa o círculo, com o mesmo anel */
+.no i.com-foto { overflow: hidden; background: #ece7dc; }
+.no i.com-foto img { width: 100%; height: 100%; object-fit: cover; border-radius: 50%; display: block; }
 .bandeira { font-size: 12px; }
 .uniao { position: absolute; left: var(--x); top: var(--y); transform: translate(-50%, -50%) scale(var(--s, 0)); font-size: 12px; color: #a47f45; padding: 3px 10px; border-radius: 999px; background: var(--fundo); box-shadow: inset 0 0 0 1px #d8bd8c; }
 
@@ -289,6 +294,8 @@ h3 { font-size: 23px; line-height: 1.15; font-variation-settings: "SOFT" 100, "o
   .no b { font-size: 14px; }
   .no small { font-size: 12px; }
   .memoria-voa { width: 150px; font-size: 12px; padding: 10px; }
+  .memoria-voa.foto { width: 184px; }
+  .memoria-voa.foto .foto-cor { height: 112px; }
   .memoria-voa .legenda b { font-size: 15px; }
   .foto-cor { height: 74px; }
   .cuidado-cabeca { flex-direction: column; align-items: flex-start; }

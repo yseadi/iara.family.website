@@ -220,7 +220,7 @@ window.TEXTOS_PT = {
   "hiMae": "Por parte de mãe:",
   "hiIrmaos": "Aos meus irmãos:",
   "hiSobrinhos": "Aos meus sobrinhos e às minhas sobrinhas:",
-  "hiInfancia": "Às minhas amigas de infância, que estiveram do meu lado quando eu ainda descobria e construía parte do que sou hoje, e que me acolhem em todas as minhas peles:",
+  "hiInfancia": "Às mulheres que escolhi como irmãs, que estiveram do meu lado quando eu ainda descobria e construía parte do que sou hoje, e que me acolhem em todas as minhas peles:",
   "hiInternacionais": "Às minhas amigas internacionais, que me ajudaram a entender esse quebra-cabeça identitário, tão importante no meu desenvolvimento como mulher latina-árabe, entre tantas outras camadas:",
   "hiGaza": "Aos meus alunos e mentorados palestinos, de Gaza e de toda a Palestina, cuja resiliência me inspira todos os dias e me lembra por que é meu dever usar todas as ferramentas que tenho para tornar o mundo mais seguro para vocês:",
   "hiTecnica": "Aos meus amigos e às minhas amigas que estiveram comigo na parte técnica, nos testes, no desenvolvimento e, principalmente, no incentivo:",
