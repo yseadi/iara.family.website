@@ -122,7 +122,7 @@
     acerta();
   }
 
-  // A luz que segue o mouse nas partes escuras, em todas as páginas
+  // A luz que segue o mouse, em todas as páginas: dourada no escuro e em ouro suave no claro
   if (matchMedia("(pointer: fine)").matches) {
     let lanterna = document.querySelector("[data-lanterna]");
     if (!lanterna) {
@@ -133,8 +133,10 @@
     addEventListener("pointermove", (e) => {
       lanterna.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
       const sob = document.elementFromPoint(e.clientX, e.clientY)?.closest("[data-tema]");
-      lanterna.classList.toggle("acesa", sob?.dataset.tema === "escuro");
+      lanterna.classList.add("acesa");
+      lanterna.classList.toggle("no-claro", sob?.dataset.tema !== "escuro");
     }, { passive: true });
+    document.documentElement.addEventListener("mouseleave", () => lanterna.classList.remove("acesa"));
   }
 
   // Fotos com moldura: a imagem anda um pouco dentro dela
