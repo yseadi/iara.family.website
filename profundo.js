@@ -97,7 +97,7 @@
       carta.style.setProperty("--segura", `${Math.round(segura)}px`);
       carta.style.setProperty("--escala", escala.toFixed(4));
       // o que ainda está dentro do envelope fica escondido (corta na borda de baixo do envelope)
-      if (sai >= 1) carta.style.setProperty("--corte", "-60px");
+      if (sai >= 1) carta.style.setProperty("--corte", "-140px");
       else {
         const f = folha.getBoundingClientRect();
         const baseEnvelope = cena.getBoundingClientRect().bottom + sai * vh * 0.75;
@@ -108,6 +108,33 @@
     addEventListener("scroll", () => requestAnimationFrame(abre), { passive: true });
     addEventListener("resize", () => { mede(); abre(); });
     mede(); abre();
+  }
+
+  // Rodapé por cima do site: a parte antes do "Comece" fica parada quando o fim dela chega ao fim da tela,
+  // e o "Comece" com o rodapé sobe por cima dela
+  const comece = document.querySelector("main > .comece");
+  const antes = comece?.previousElementSibling;
+  if (antes) {
+    antes.classList.add("sobreposto");
+    const acerta = () => { antes.style.top = `${Math.min(0, innerHeight - antes.offsetHeight)}px`; };
+    new ResizeObserver(acerta).observe(antes);
+    addEventListener("resize", acerta);
+    acerta();
+  }
+
+  // A luz que segue o mouse nas partes escuras, em todas as páginas
+  if (matchMedia("(pointer: fine)").matches) {
+    let lanterna = document.querySelector("[data-lanterna]");
+    if (!lanterna) {
+      lanterna = document.createElement("div");
+      lanterna.className = "lanterna"; lanterna.dataset.lanterna = ""; lanterna.setAttribute("aria-hidden", "true");
+      document.body.append(lanterna);
+    }
+    addEventListener("pointermove", (e) => {
+      lanterna.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
+      const sob = document.elementFromPoint(e.clientX, e.clientY)?.closest("[data-tema]");
+      lanterna.classList.toggle("acesa", sob?.dataset.tema === "escuro");
+    }, { passive: true });
   }
 
   // Fotos com moldura: a imagem anda um pouco dentro dela

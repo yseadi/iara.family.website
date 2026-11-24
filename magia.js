@@ -114,13 +114,7 @@
     dedo = { x: e.clientX - r.left, y: e.clientY - r.top };
   }, { passive: true });
 
-  // Luz que segue o mouse nas partes escuras
-  const lanterna = $("[data-lanterna]");
-  if (fino) addEventListener("pointermove", (e) => {
-    lanterna.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
-    const sob = document.elementFromPoint(e.clientX, e.clientY)?.closest("[data-tema]");
-    lanterna.classList.toggle("acesa", sob?.dataset.tema === "escuro");
-  }, { passive: true });
+  // A luz que segue o mouse nas partes escuras fica no profundo.js (todas as páginas)
 
   // O celular do "Como funciona" acompanha o mouse bem de leve
   if (fino) {
