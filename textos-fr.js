@@ -127,7 +127,7 @@ window.TEXTOS_FR = {
   "hiMae": "Du côté de ma mère :",
   "hiIrmaos": "À mes frères :",
   "hiSobrinhos": "À mes neveux et à mes nièces :",
-  "hiInfancia": "À mes amies de longue date, qui étaient à mes côtés quand je découvrais et construisais encore une partie de ce que je suis aujourd’hui, et qui m’accueillent dans toutes mes peaux :",
+  "hiInfancia": "Aux femmes que j’ai choisies comme sœurs, qui étaient à mes côtés quand je découvrais et construisais encore une partie de ce que je suis aujourd’hui, et qui m’accueillent dans toutes mes peaux :",
   "hiInternacionais": "À mes amies d’ailleurs, qui m’ont aidée à comprendre ce puzzle identitaire, si important dans mon parcours de femme latino-arabe, parmi tant d’autres couches :",
   "hiGaza": "À mes élèves et à mes mentorés palestiniens, de Gaza et de toute la Palestine, dont la résilience m’inspire chaque jour et me rappelle pourquoi il est de mon devoir d’utiliser tous les outils dont je dispose pour rendre le monde plus sûr pour vous :",
   "hiTecnica": "À mes amis et à mes amies qui m’ont accompagnée dans la partie technique, les tests, le développement et, surtout, les encouragements :",
